@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GravityMark[1-53]portable
+Comment=GravityMark GPU Benchmark, easily stress test any GPU, support API: OpenGL, OpenLG ES, Direct3d11, Direct3d12, Metal, Vulkan
+Categories=Utility;Games;
+Exec=bash -c /home/gamer/GravityMark[1-53]portable/app/gravity_mark_starter.sh
+Terminal=true
+Icon=/home/gamer/GravityMark[1-53]portable/icons/gravity-mark88.jpg

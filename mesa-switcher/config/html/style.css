@@ -1,0 +1,19 @@
+.menu {
+    background-color: #181717;
+    box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.5);
+    width: 820px;
+}
+.menu li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 35px;
+    color: #6f6d6d;
+}
+.menu li:hover {
+    background-color: #f87777;
+    cursor: pointer;
+    color: #000000;
+}
+.menu ul {
+    padding: 0px;
+}

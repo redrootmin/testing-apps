@@ -1,0 +1,9 @@
+[Unit]
+Description=game-pad-bluetooth-service
+     
+[Service]
+ExecStart=/bin/bash '/home/gamer/bzu-gmb-apps/linux-game-pad/app/game-pad-service.sh'
+Restart=on-failure
+     
+[Install]
+WantedBy=multi-user.target
