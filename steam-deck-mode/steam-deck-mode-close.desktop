@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Steam-Deck-Mode-close
+Comment=This session logs you directly to STEAM
+Exec=steam-deck-mode-close
+Icon=/home/gamer/bzu-gmb-apps/steam-deck-mode/steam-deck-close-logo-128.png
+Terminal=true
+Categories=Utility;Games;
+Type=Application

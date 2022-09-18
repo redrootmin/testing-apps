@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Steam-Deck-Mode-Desktop
+Comment=This session logs you directly to STEAM
+Exec=bash -c "/home/gamer/bzu-gmb-apps/steam-deck-mode/steam-deck-mode-starter.sh"
+Icon=/home/gamer/bzu-gmb-apps/steam-deck-mode/steam-deck-desktop-logo-128-v2.png
+Terminal=true
+Categories=Utility;Games;
+Type=Application

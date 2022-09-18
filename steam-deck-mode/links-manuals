@@ -1,0 +1,101 @@
+https://www.reddit.com/r/SteamDeck/comments/t57l4t/how_to_get_the_steam_deck_ui_on_windowsany_linux/
+
+===================================================================================================
+#0
+sudo apt-get install python3-xlib
+#1
+Linux:
+Open the folder ~/.steam/steam/package
+
+Create a file simply named beta if it isn't already there and replace all of its content with this text: steampal_stable_9a24a2bf68596b860cb6710d9ea307a76c29a04d
+
+Then run steam with the argument -gamepadui
+
+#2
+For those who are using the Steam Flatpak, substitute ~/.steam/steam/package with ~/.var/app/com.valvesoftware.Steam/.steam/steam/package.
+
+To run it, run flatpak run com.valvesoftware.Steam -gamepadui.
+
+====================================================================================================
+#3
+https://github.com/Plagman/gamescope
+sudo apt install -f libx11-dev cmake git libxdamage-dev libxcomposite-dev libxrender-dev libxxf86vm-dev libxres-dev libdrm-dev libvulkan-dev wayland-protocols libxkbcommon-dev libcap-dev libsdl2-dev libgbm-dev libpixman-1-dev libinput-dev libseat-dev
+sudo add-apt-repository ppa:samoilov-lex/gamescope
+sudo apt-get install -f gamescope
+
+
+
+build:
+git clone https://github.com/Plagman/gamescope.git
+cd gamescope/
+git submodule update --init
+meson install -C build/ --skip-subprojects
+
+gamescope -W 1920 -H 1080 --steam -f -- steam -steamos -gamepadui
+
+
+# Upscale a 720p game to 1440p with integer scaling
+gamescope -h 720 -H 1440 -n -- %command%
+
+# Limit a vsynced game to 30 FPS
+gamescope -r 30 -- %command%
+
+# Run the game at 1080p, but scale output to a fullscreen 3440×1440 pillarboxed ultrawide window
+gamescope -w 1920 -h 1080 -W 3440 -H 1440 -b -- %command%
+
+On any X11 or Wayland desktop, you can set the Steam launch arguments of your game as follows:
+
+# Upscale a 720p game to 1440p with integer scaling
+gamescope -h 720 -H 1440 -n -- %command%
+
+# Limit a vsynced game to 30 FPS
+gamescope -r 30 -- %command%
+
+# Run the game at 1080p, but scale output to a fullscreen 3440×1440 pillarboxed ultrawide window
+gamescope -w 1920 -h 1080 -W 3440 -H 1440 -b -- %command%
+
+    NOTE: If you are running on NVIDIA, you will need the nvidia-drm.modeset=1 kernel parameter.
+
+Options
+
+See gamescope --help for a full list of options.
+
+    -W, -H: set the resolution used by gamescope. Resizing the gamescope window will update these settings. Ignored in embedded mode. If -H is specified but -W isn't, a 16:9 aspect ratio is assumed. Defaults to 1280×720.
+    -w, -h: set the resolution used by the game. If -h is specified but -w isn't, a 16:9 aspect ratio is assumed. Defaults to the values specified in -W and -H.
+    -r: set a frame-rate limit for the game. Specified in frames per second. Defaults to unlimited.
+    -o: set a frame-rate limit for the game when unfocused. Specified in frames per second. Defaults to unlimited.
+    -U: use AMD FidelityFX™ Super Resolution 1.0 for upscaling
+    -Y: use NVIDIA Image Scaling v1.0.2 for upscaling
+    -n: use integer scaling.
+    -b: create a border-less window.
+    -f: create a full-screen window.
+
+==========================================================================================
+
+/bin/steam-deck-mode
+/usr/share/xsessions/steam-deck-mode.desktop
+================================================================================================
+bluetoothctl remove MAC-address
+bluetoothctl trust MAC-address
+bluetoothctl disconnect MAC-address
+bluetoothctl connect MAC-address
+
+bluetoothctl connect BA:34:22:81:63:25 &while true;do sleep 1;echo "work bluetouch";bluetoothctl connect BA:34:22:81:63:25;done
+================================================================================================
+
+#DISABLE PASSWORD REQUEST FROM SUSPEND
+gsettings get org.gnome.desktop.screensaver lock-enabled
+gsettings set org.gnome.desktop.screensaver lock-enabled false
+
+https://portwine-linux.ru/%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-x-%D1%81%D0%B5%D1%81%D1%81%D0%B8%D1%8F-ubuntu-18-04-%D0%B2%D1%8B%D1%88%D0%B5/
+
+#https://www.mankier.com/1/xdotool#Window_Stack
+echo $XDG_SESSION_TYPE
+sudo dnf install xdotool
+
+xdotool search --class steamwebhelper  windowactivate
+xdotool search --class steamwebhelper  windowactivate key alt+Return
+
+
+
+
