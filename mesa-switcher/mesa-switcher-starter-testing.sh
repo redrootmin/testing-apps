@@ -44,7 +44,7 @@ YAD0="${utils_dir}/yad"
 zenity0="${utils_dir}/zenity"
 export YAD=${YAD0}
 export zenity=${zenity0}
-html5_menu_app0=`cat "$script_dir/config/html/html-menu5.html"`
+html5_menu_app0=`cat "$script_dir/config/html/html-menu.html"`
 export html5_menu_app=$html5_menu_app0
 echo "$html5_menu_app"
 #определяем какая версия скрипта запущена (стабильная/тестовая)
@@ -196,10 +196,14 @@ echo "$html5_menu_app" | stdbuf -oL -eL ${YAD} --title="Mesa Switcher" \
 done
 }
 
+function html5-menu-app2 () {
+echo "$html5_menu_app" | stdbuf -oL -eL yad  --html --width=830 --height=313 --print-uri 2>&1 --button=cancel:1 --center --undecorated --splash --print-uri 2>&1 | while read -r line; do echo "${line##*/}";done
+}
+
 # бесконечный цикл для формы программы
 #while true;do
 #gui_app_generator 
-html5-menu-app
+html5-menu-app2
 #echo "select_button $select_button"
 #echo "style_select[$style_select]"
 #exit 0
@@ -274,3 +278,6 @@ exit 0
 #  fi
 
 #fi
+<ul>
+        <li><a href="">Что-то</a></li>
+ </ul>
