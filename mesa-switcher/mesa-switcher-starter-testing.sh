@@ -197,7 +197,7 @@ done
 }
 
 function html5-menu-app2 () {
-echo "$html5_menu_app" | stdbuf -oL -eL yad  --html --width=830 --height=313 --print-uri 2>&1 --button=cancel:1 --center --undecorated --splash --print-uri 2>&1 | while read -r line; do echo "${line##*/}";done
+echo "$html5_menu_app" | stdbuf -oL -eL yad  --html --width=815 --height=313 --print-uri 2>&1 --button=cancel:1 --center --undecorated --splash --print-uri 2>&1 | while read -r line; do echo "${line##*/}";done
 }
 
 # бесконечный цикл для формы программы
