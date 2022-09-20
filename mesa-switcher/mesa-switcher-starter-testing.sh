@@ -44,7 +44,7 @@ YAD0="${utils_dir}/yad"
 zenity0="${utils_dir}/zenity"
 export YAD=${YAD0}
 export zenity=${zenity0}
-html5_menu_app0=`cat "$script_dir/config/html/html-menu.html"`
+html5_menu_app0=`cat "$script_dir/config/html/html-menu5.html"`
 export html5_menu_app=$html5_menu_app0
 echo "$html5_menu_app"
 #определяем какая версия скрипта запущена (стабильная/тестовая)
