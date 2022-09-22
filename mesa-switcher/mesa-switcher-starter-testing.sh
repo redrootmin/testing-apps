@@ -192,7 +192,7 @@ export mesa_for_installing="${line##*/}"
       mesa-fidel-git)
         echo "начинаем установку ${mesa_for_installing}"
         ;;
-      Mmesa-fidel-git-devel)
+      mesa-fidel-git-devel)
         echo "начинаем установку ${mesa_for_installing}"
         ;;
 
