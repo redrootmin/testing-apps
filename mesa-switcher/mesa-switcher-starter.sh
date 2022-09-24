@@ -91,67 +91,20 @@ else
 echo "true" > "${script_dir}/config/install-status"
 fi
 
-
-# функция перезагрузки гнома
-function gnome_rebooting () {
-killall -SIGQUIT gnome-shell
-#killall -3 gnome-shell
-}
-
 # функция рекомендации перезагрузки системы
 function ggs_rebooting () {
-GTK_THEME="Adwaita-dark" ${YAD} --title="$version" --image-on-top --picture --size=fit --filename="${script_dir}/icons/gnome-ext-pack.png" --width=327 --height=327 --center --inc=256  --text-align=center --text="ТРЕБУЕТСЯ ПЕРЕАГРУЗКА GNOME, для этого нажмите alt+f2, далее введите r и нажмите inter!" --timeout=5 --timeout-indicator=bottom 
+GTK_THEME="Adwaita-dark" ${YAD} --title="$version" --image-on-top --picture --size=fit --filename="${script_dir}/icons/gnome-ext-pack.png" --width=327 --height=327 --center --inc=256  --text-align=center --text="ТРЕБУЕТСЯ ПЕРЕАГРУЗКА СИСТЕМЫ!" --timeout=5 --timeout-indicator=bottom 
 }
 
 # функция отключения всех дополнений
 function gnome_ext_configure () {
-style_run_func="$1" 
+mesa_install_run="$1" 
 (
 echo "test"
-) | ${zenity} --progress --title="НАСТРОЙКА GNOME $gnome_version" --text="идет настройка стиля $style_run_func в GNOME $gnome_version, ожидайте." --percentage=0 --no-cancel --auto-close --pulsate
-}
-
-# функция с меню программы
-function gui_app_generator () {
-KEY_GUI=`echo $RANDOM`
-# tabs1
-GTK_THEME="Adwaita-dark" ${YAD} --plug="$KEY_GUI" --tabnum=1 --list --no-headers --radiolist \
---separator=" " --search-column=4 --print-column=2 \
---column=выбор --column=Style:TEXT --column=лого:IMG \
-FALSE "rosa" "$script_dir/images/$linuxos_run/rosa.png" \
-FALSE "redroot" "$script_dir/images/$linuxos_run/redroot.png" \
-FALSE "macos" "$script_dir/images/$linuxos_run/macos.png" \
-FALSE "mint" "$script_dir/images/$linuxos_run/mint.png" \
-FALSE "ubuntu" "$script_dir/images/$linuxos_run/ubuntu.png" > "$script_dir/config/style_select"&
-
-# tabs2
-GTK_THEME="Adwaita-dark" ${YAD} --plug="$KEY_GUI" --tabnum=2 --form \
---columns=2 --align-buttons --keep-icon-size --scroll \
---image="$image2" > "$script_dir/config/theme_colors"&
-
-# tabs3
-GTK_THEME="Adwaita-dark" ${YAD} --plug="$KEY_GUI" --tabnum=3 --form \
---image="$image2" > "$script_dir/config/conf_temp_gui"&
-
-# run core-gui-app
-GTK_THEME="Adwaita-dark" ${YAD} --notebook --center --undecorated --splash --key="$KEY_GUI" --tab="Style GUI" --tab="Theme+Colors" --tab="Config" --title="${version}-${linuxos_version}"  --window-icon="$icon1" --image="$image1" --image-on-top --width=490 --height=900 --button="Update:0" --button="Exit:1" --button="Apply:2"
-
-select_button0="$?"
-export select_button=$select_button0
-
-style_select0=`cat "$script_dir/config/style_select"`
-export style_select=$style_select0
-rm -f "$script_dir/config/style_select"
-theme_colors0=`cat "$script_dir/config/theme_colors"`
-export theme_colors="$theme_colors0"
-rm -f "$script_dir/config/theme_colors"
-conf_temp_gui0=`cat "$script_dir/config/conf_temp_gui"`
-export conf_temp_gui="$conf_temp_gui0"
-rm -f "$script_dir/config/theme_colors"
+) | ${zenity} --progress --title="НАСТРОЙКА СИСТЕМЫ $gnome_version" --text="идет установка $mesa_install_run, ожидайте." --percentage=0 --no-cancel --auto-close --pulsate
 }
 
 function html5-menu-app () {
-#yad  --html --width=830 --height=313 --browser --uri="$script_dir/config/html/html5-menu-app.html" --print-uri 2>&1 --button=cancel:1 --center --undecorated --splash
 
 echo "$html5_menu_app" | stdbuf -oL -eL ${YAD} --title="Mesa Switcher" \
                     --width=820 --height=313 \
@@ -182,6 +135,7 @@ echo "$html5_menu_app" | stdbuf -oL -eL yad  --html \
 --splash --print-uri 2>&1 --window-icon="$icon1" \
 | while read -r line; do
 export mesa_for_installing="${line##*/}"
+     tput setaf 2;echo "${line##*/}";tput setaf 0
      case ${mesa_for_installing} in
       mesa-default)
         echo "начинаем установку ${mesa_for_installing}"
@@ -203,51 +157,7 @@ done
 }
 
 # бесконечный цикл для формы программы
-#while true;do
-#gui_app_generator 
 html5-menu-app2
-#echo "select_button $select_button"
-#echo "style_select[$style_select]"
-#exit 0
-#style_case=`echo "$style_select" | sed '/^$/d'`
-
-# включение обнавления
-#if [[ ${select_button} == "0" ]];then
-#bash "$script_dir/manual_update.sh" $pass_user $name_script
-#fi
-
-#проверка на выход из программы
-#if [[ $style_select == "" ]] || [[ ${select_button} == "1" ]];then
-#exit 0
-#fi
-
-#case "$style_run" in
-
-#"ubuntu")
-
-#;;
-
-#"macos")
-
-#;;
-
-#"mint")
-
-#;;
-
-#"rosa")
-
-#;;
-
-#"redroot")
-
-#;;
-
-#esac
-
-#echo "перезапускаем модуль меню $version"
-
-#done
 
 exit 0
 
