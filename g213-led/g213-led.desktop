@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=g213-led
+Comment=Logitech G213 Prodigy control led
+Categories=Utility;Games;
+Exec=bash -c /home/redroot/g213-led/g213-led-green.sh
+Terminal=false
+Icon=/home/redroot/g213-led/g213-led.png

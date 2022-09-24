@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pipewire-Simultaneous
+Comment=Audio;
+Categories=Audio;
+Exec=bash -c /home/redroot/bzu-gmb-utils/Pipewire-Simultaneous/Pipewire-Simultaneous.sh
+Terminal=false
+Icon=/home/redroot/bzu-gmb-utils/Pipewire-Simultaneous/pipewire.png

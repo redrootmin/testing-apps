@@ -1,0 +1,22 @@
+{
+  "file_format_version": "1.0.0",
+  "ICD": {
+    "library_path": "/home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/gcn1/lib32bit/amdvlk32.so",
+    "api_version": "1.2.179"
+  },
+  "layer": {
+    "name": "VK_LAYER_AMD_switchable_graphics_32",
+    "type": "GLOBAL",
+    "library_path": "/home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/gcn1/lib32bit/amdvlk32.so",
+    "api_version": "1.2.179",
+    "implementation_version": "1",
+    "description": "AMD switchable graphics layer",
+    "functions": {
+      "vkGetInstanceProcAddr": "vk_icdGetInstanceProcAddrSG",
+      "vkGetDeviceProcAddr": "vk_icdGetDeviceProcAddrSG"
+    },
+    "disable_environment": {
+      "DISABLE_LAYER_AMD_SWITCHABLE_GRAPHICS_1": "1"
+    }
+  }
+}

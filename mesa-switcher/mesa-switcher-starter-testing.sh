@@ -182,6 +182,7 @@ echo "$html5_menu_app" | stdbuf -oL -eL yad  --html \
 --splash --print-uri 2>&1 --window-icon="$icon1" \
 | while read -r line; do
 export mesa_for_installing="${line##*/}"
+     tput setaf 2;echo "${line##*/}";tput setaf 0
      case ${mesa_for_installing} in
       mesa-default)
         echo "начинаем установку ${mesa_for_installing}"

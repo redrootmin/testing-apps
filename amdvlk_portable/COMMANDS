@@ -1,0 +1,10 @@
+#for HD7970/r9 200/300
+amdvlk-gcn1 /vulkan-app
+#for test
+amdvlk-gcn1-test
+
+#for AMD GPU NEW
+amdvlk /vulkan-app
+#for test
+amdvlk-test
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+#creator by RedRoot(Yacyna Mehail) for GAMER STATION [on linux] and Gaming Community OS Linux
+# GPL-3.0 License 
+vk_icd_amdvlk=/home/gamer/.local/bin/amdvlk_hd7970/64bit/amd_icd64.json:/home/gamer/.local/bin/amdvlk_hd7970/32bit/amd_icd32.json
+
+exec env "VK_ICD_FILENAMES=${vk_icd_amdvlk}" "$@"

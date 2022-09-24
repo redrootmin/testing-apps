@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=overclock-monitor
+Comment=create mode 1920x1080\75Hz
+Categories=Utility;Games;
+Exec=bash -c /home/redroot/overclock-monitor/overclock-monitor.sh
+Terminal=false
+Icon=/home/redroot/overclock-monitor/overclock-monitor-logo.png

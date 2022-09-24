@@ -1,0 +1,8 @@
+#!/bin/bash
+#creator by RedRoot(Yacyna Mehail) for GAMER STATION [on linux] and Gaming Community OS Linux
+# GPL-3.0 License 
+LD_PRELOAD="/home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/gcn1/lib64bit/spvgen.so"
+LD_LIBRARY_PATH="/home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/gcn1/lib64bit"
+vk_icd_amdvlk=/home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/gcn1/lib64bit/amd_icd64.json:/home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/gcn1/lib32bit/amd_icd32.json
+
+exec env "VK_ICD_FILENAMES=${vk_icd_amdvlk}" "$@"

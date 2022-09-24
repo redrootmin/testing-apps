@@ -1,0 +1,8 @@
+#!/bin/bash
+#creator by RedRoot(Yacyna Mehail) for GAMER STATION [on linux] and Gaming Community OS Linux
+# GPL-3.0 License 
+LD_PRELOAD="/home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/gcn1/lib64bit/spvgen.so:/home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/test/libMangoHud.so"
+LD_LIBRARY_PATH="/home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/gcn1/lib64bit:/home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/test/"
+#vk_icd_amdvlk=/home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/gcn1/lib64bit/amd_icd64.json:/home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/gcn1/lib32bit/amd_icd32.json
+
+MANGOHUD_CONFIGFILE=/home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/test/MangoHud.conf VK_LAYER_PATH="/home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/test" VK_INSTANCE_LAYERS=VK_LAYER_MANGOHUD_overlay LD_LIBRARY_PATH="${LD_LIBRARY_PATH}" LD_PRELOAD="${LD_PRELOAD}" amdvlk-gcn1 /home/gamer/.local/share/bzu-gmb-utils/amdvlk_portable/test/./vulkan-smoketest --d --w 800 --h 600 --flush& sleep 10;killall "vulkan-smoketest"
