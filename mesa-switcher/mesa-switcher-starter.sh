@@ -161,12 +161,6 @@ html5-menu-app2
 
 exit 0
 
-
-#GTK_THEME="Adwaita-dark" ${YAD} --title="Back to Ubuntu Vanilla" --image-on-top --picture --size=fit --filename="${script_dir}/icons/gnome-ext-pack.png" --width=327 --height=327 --center --inc=256  --text-align=center --text="ТРЕБУЕТСЯ ПЕРЕАГРУЗКА СИСТЕМЫ!" --timeout=5 --timeout-indicator=bottom 
-
-#script_dir0=$(dirname $(readlink -f "$0"))
-#
-
 #if [[ "$installing_status" == "true" ]]
 #  then
 #  tput setaf 2
@@ -190,6 +184,6 @@ exit 0
 #  fi
 
 #fi
-<ul>
-        <li><a href="">Что-то</a></li>
- </ul>
+#<ul>
+#        <li><a href="">Что-то</a></li>
+# </ul>
