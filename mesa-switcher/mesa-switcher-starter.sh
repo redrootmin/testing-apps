@@ -104,30 +104,6 @@ echo "test"
 ) | ${zenity} --progress --title="НАСТРОЙКА СИСТЕМЫ $gnome_version" --text="идет установка $mesa_install_run, ожидайте." --percentage=0 --no-cancel --auto-close --pulsate
 }
 
-function html5-menu-app () {
-
-echo "$html5_menu_app" | stdbuf -oL -eL ${YAD} --title="Mesa Switcher" \
-                    --width=820 --height=313 \
-                    --html --center --undecorated --splash \
-                    --button=cancel:1 \
-                    --print-uri 2>&1 \
-| while read -r line; do
-     case ${line##*/} in
-      gg)
-        $YAD --about ;;
-      bb)
-        $YAD --list --column=column hello there ;;
-      ee)
-        $YAD --text=hmm ;;
-      rodrigues)
-        $YAD --text=rodrigues ;;
-      txt)
-        echo "text" | $YAD --text-info ;;
-      *) echo "unknown command" ;;
-     esac
-done
-}
-
 function html5-menu-app2 () {
 echo "$html5_menu_app" | stdbuf -oL -eL yad  --html \
 --width=830 --height=313 --print-uri 2>&1 \
@@ -135,7 +111,7 @@ echo "$html5_menu_app" | stdbuf -oL -eL yad  --html \
 --splash --print-uri 2>&1 --window-icon="$icon1" \
 | while read -r line; do
 export mesa_for_installing="${line##*/}"
-     tput setaf 2;echo "${line##*/}";tput setaf 0
+     tput setaf 2;echo "${line##*/}";tput sgr 0
      case ${mesa_for_installing} in
       mesa-default)
         echo "начинаем установку ${mesa_for_installing}"

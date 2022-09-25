@@ -1,0 +1,9 @@
+OpenGL is a cross-platform, industry standard graphics programming API for 3D graphics.
+OpenGL ES is the mobile subset of OpenGL. It's supported on all major mobile platforms, and is also the base for WebGL.
+Vulkan is the next-generation graphics programming API from The Khronos® Group.
+EGL is an interface between Khronos rendering APIs such as OpenGL or OpenVG and the underlying native platform window system.
+OpenMAX is a non-proprietary and royalty-free cross-platform set of C-language programming interfaces, provides abstractions for processing of audio, video, and still images.
+OpenCL is a framework for writing programs that execute across heterogeneous platforms consisting of CPUs, GPUs, DSPs, FPGAs and other processors or hardware accelerators.
+VDPAU is the Video Decode and Presentation API for UNIX. It provides an interface to video decode acceleration and presentation hardware present in modern GPUs.
+VA-API is an open-source library and API specification, which provides access to graphics hardware acceleration capabilities for video processing.
+XvMC is an extension of the X video extension (Xv) for the X Window System. The XvMC API allows video programs to offload portions of the video decoding process to the GPU hardware.
