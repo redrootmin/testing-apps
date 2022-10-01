@@ -6,7 +6,8 @@ game_pad_dir=$(cd $(dirname "$0") && pwd)
 mac=`cat $game_pad_dir/pad-mac`
 while true
 do 
-bluetoothctl --timeout 3 scan on
+sleep 5
+#bluetoothctl --timeout 3 scan on
 bluetoothctl connect ${mac}
 done
 #game_pad_dir=$(cd $(dirname "$0") && pwd);mac=`cat $game_pad_dir/pad-mac`;bluetoothctl connect ${mac}
