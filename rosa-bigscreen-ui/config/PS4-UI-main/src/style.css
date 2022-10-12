@@ -1,0 +1,97 @@
+*{
+    user-select: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    cursor: none;
+}
+body{
+    background: url(https://wallpaperaccess.com/full/258112.jpg);
+    background-size:cover;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body,html{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.infos{
+    display: flex;
+    gap: 40px;
+    padding-left: 25%;
+    transition: 1s;
+    padding-top: 50px;
+    font-size: 20px;
+}
+#infos-game{
+    align-items: center;
+    align-content: center;
+    display: flex;
+}
+#infos-game img{
+    width: 40px;
+    position: absolute;
+    margin-left: -50px;
+    height: 40px;
+}
+#personal-user-infos{
+    display: flex;
+    gap: 25px;
+    margin-left: 40%;
+    align-items: center;
+    align-content: center;
+}
+#hours{
+    padding-left: 200px;
+}
+#personal-user-infos img{
+    width: 40px;
+    height: 40px;
+}
+.games-container{
+    display: flex;
+    gap: 45px;
+    height: 500px;
+    padding-top: 10%;
+    transition: 1s;
+    padding-left: 5%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.games-container img{
+    width: 240px;
+    transition: 1s;
+    height: 240px;
+}
+#start-bar{
+    position: relative;
+    margin-top: 19.5%;
+    transition: 1s;
+    width: 400px;
+    width: 50px;
+}
+#start-bar p{
+    background-color: black;
+    text-align: center;
+    font-weight: bold;
+    outline:5px solid rgba(38, 168, 180, 0.746);
+    position: absolute;
+    margin-left: -100px;
+    width: 290px;
+    padding-top:50%;
+    height: 40px;
+}
+#game-name{
+    background-color: rgba(0, 0, 0, 0.774);
+    width: 1100px;
+    height: 50px;
+    margin-left: 250px;
+    padding-left: 50px;
+    padding-top: 15px;
+}
+.active{
+    transform: scale(1.2);
+    outline:5px solid rgba(38, 168, 180, 0.746);
+}

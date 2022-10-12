@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PS4 INTERFACE</title>
+        <link rel="stylesheet" href="src/style.css">
+    </head>
+    <body onload="UI()">
+        <section class = infos>
+            <div id = infos-game>
+                <img id = 'info-game-img' src="" alt="">
+                <p style="position: absolute; transition: 1s;" id = games-infos></p>
+            </div>
+            <div id = personal-user-infos>
+                <img id = user-img src="https://files.passeidireto.com/79180592-31c0-4e47-84c9-2fe48bed3f89/79180592-31c0-4e47-84c9-2fe48bed3f89.jpeg" alt="">
+                <p id = user-name>Luis Fernando</p>
+                <p id = hours></p>
+            </div>
+        </section>
+        <section class = games-container>
+            <div id = start-bar>
+                <p>INICIAR</p>
+                <h1 id = game-name></h1>
+            </div>
+        </section>
+        <script type="text/javascript" src="src/json.js"></script>
+        <script type="text/javascript" src="src/app.js"></script>
+    </body>
+</html>
