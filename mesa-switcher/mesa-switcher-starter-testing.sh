@@ -8,7 +8,7 @@ linuxos_version=`cat "/etc/os-release" | grep "PRETTY_NAME" | sed 's/PRETTY_NAME
 linuxos_gnome="true"
 
 #проверяем что система совместима с mesa-switcher
-  if echo "${linuxos_version}" | grep -ow "ROSA Fresh Desktop 12.2" > /dev/null;then
+  if echo "${linuxos_version}" | grep -ow "ROSA Fresh Desktop" > /dev/null;then
   tput setaf 2;echo "Операциооная система: ${linuxos_version} совместима с Mesa-switcher"
   tput sgr 0
   linuxos_run0="rosa"
