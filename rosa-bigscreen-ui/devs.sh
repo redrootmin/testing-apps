@@ -20,7 +20,7 @@ ggs_ui_html5_dev0="$script_dir/config/html5-xmb5.html"
 export ggs_ui_html5_dev=$ggs_ui_html5_dev0
 
 function ggs-ui-html5-app () {
-yad  --html --uri="$script_dir/config/html5-xmb5.html" --browser --fullscreen --print-uri 2>&1 | while read -r line; do
+yad  --html --uri="$script_dir/config/html5-xmb5.html" --fullscreen --no-buttons --undecorated --print-uri 2>&1 | while read -r line; do
      export url_call="${line##*/}"
      tput setaf 2;echo "${url_call}";tput setaf 0
      case ${url_call} in
