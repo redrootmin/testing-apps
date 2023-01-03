@@ -1,2 +1,8 @@
+systemctl status gamepad-b.service
+disable  gamepad-b.service
+stop  gamepad-b.service
+systemctl enable  gamepad-b.service
+systemctl start  gamepad-b.service
 
-eog unnamed.jpg
+
+
