@@ -1,6 +1,6 @@
 systemctl status gamepad-b.service
-disable  gamepad-b.service
-stop  gamepad-b.service
+systemctl disable  gamepad-b.service
+systemctl stop  gamepad-b.service
 systemctl enable  gamepad-b.service
 systemctl start  gamepad-b.service
 
