@@ -1,0 +1,28 @@
+2023:01:10@08:17:20(0000000001) < > GpuTest (Linux x64) is starting up...
+2023:01:10@08:17:20(0000000002) < > GpuTest: Cross Platform Graphics Benchmark Utility
+2023:01:10@08:17:20(0000000003) < > (C)2012-2014 Geeks3D (www.geeks3d.com)
+2023:01:10@08:17:20(0000000004) < > Linux information:
+2023:01:10@08:17:20(0000000005) < > - sysname: Linux
+2023:01:10@08:17:20(0000000006) < > - release: 6.0.12.xm1-1.klp-xanmod-rosa2021.1-x86_64
+2023:01:10@08:17:20(0000000007) < > - version: #1 SMP PREEMPT_DYNAMIC Sun Dec 11 12:33:03 UTC 2022
+2023:01:10@08:17:20(0000000008) < > - machine: x86_64
+2023:01:10@08:17:20(0000000009) < > gxl3d codename: Zhald.
+2023:01:10@08:17:20(0000000010) <!> OpenCL support not found: unable to load the OpenCL core library (libOpenCL.so).
+2023:01:10@08:17:20(0000000011) < > gxl3d_plugin_gpu_monitor_gml: GPU monitor plugin for gxl3d.. By JeGX / Geeks3D.com
+2023:01:10@08:17:20(0000000012) < > [GpuMonitor plugin] Linux - CPU name: AMD Ryzen 3 5300U with Radeon Graphics, CPU speed: 1168MHz, RAM: 15343MB
+2023:01:10@08:17:21(0000000013) < > [GpuMonitor plugin] Num GPUs found: 1
+2023:01:10@08:17:21(0000000014) < > [GpuMonitor plugin] GPU0 - Advanced Micro Devices, Inc. [AMD/ATI] Lucienne (rev c3)
+
+2023:01:10@08:17:21(0000000015) < > [GpuMonitor plugin] GPU0 - PCI codes: 0x1002-0x164C
+2023:01:10@08:17:21(0000000016) < > GPU monitoring thread started.
+2023:01:10@08:17:21(0000000017) < > Display size: width=1920, height=1080
+2023:01:10@08:17:21(0000000018) < > Window size: width=640, height=480, left=0, top=0
+2023:01:10@08:17:23(0000000019) < > FurMark - OpenGL renderer init OK.
+2023:01:10@08:17:23(0000000020) < > FurMark - VSYNC disabled (xxx_SwapInterval_xxx available).
+2023:01:10@08:17:23(0000000021) < > FurMark - OpenGL version detected: 4.6
+2023:01:10@08:17:23(0000000022) < > FurMark - # OpenGL extensions: 257
+2023:01:10@08:17:23(0000000023) < > FurMark - OpenGL - Renderer model: zink (AMD Unknown (RADV RENOIR))
+2023:01:10@08:17:23(0000000024) < > FurMark - OpenGL - Renderer vendor: Collabora Ltd
+2023:01:10@08:17:23(0000000025) < > FurMark - OpenGL - API version: 4.6 (Core Profile) Mesa 22.3.1
+2023:01:10@08:17:23(0000000026) < > FurMark - OpenGL - Shading language version: 4.60
+2023:01:10@08:17:23(0000000027) < > FurMark : init OK.

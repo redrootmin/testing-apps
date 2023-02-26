@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=FurMark Linux
+Comment=Furmark Linux is tester API: OpenGL, Zink(OpenGL to Vulkan)
+Categories=Utility;Games;
+Exec=bash -c /home/gamer/bzu-gmb-apps/furmark_linux/app/furmark_starter.sh
+Terminal=true
+Icon=/home/gamer/bzu-gmb-apps/furmark_linux/furmark_benchmark.png
