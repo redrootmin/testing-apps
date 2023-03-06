@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Blush (PS4 UI)</title>
+  <!-- META -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- TITLE -->
+<title>PS4</title><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--
+  Blush | PS4 XMB Styled OS
+-->
+
+<!-- Quick-Glance menu -->
+<header>
+  <div id="plus"></div>
+  <div id="info"></div>
+  <div id="notifications"></div>
+  <div id="friends">15</div>
+  <div id="user"></div>
+  <div id="username">Pixmy Sky</div>
+  <div id="trophies"></div>
+  <div id="clock">--:-- AM</div>
+</header>
+
+<!-- The XMB -->
+<div id="xmb-menu">
+
+  <!-- Store menu item -->
+  <div class="menu-item">
+    <div class="item-img ps-store"></div>
+    <div class="item-subtitle">Start</div>
+    <span class="item-title">PlayStation&reg; Store</span>
+
+    <!-- Store items -->
+    <div class="rss">
+      <div id="god"        class="sub-item"></div>
+      <div id="tombraider" class="sub-item"></div>
+      <div id="cod-iw"     class="sub-item"></div>
+      <div id="destiny"    class="sub-item"></div>
+      <div id="bf"         class="sub-item"></div>
+      <div id="horizon"    class="sub-item"></div>
+      <div id="persona"    class="sub-item"></div>
+    </div>
+  </div>
+
+  <!-- Other menu items -->
+  <div class="menu-item">
+    <div class="item-img new"></div>
+    <div class="item-subtitle ascii">▼</div>
+    <span class="item-title">What's New</span>
+
+    <!-- What's New -->
+    <div class="rss">
+      <div id="mafia"      class="sub-item"></div>
+    </div>
+  </div>
+
+  <!-- Overwatch -->
+  <div id="game-overwatch" class="menu-item"
+       context-menu="
+                     Start Overwatch&reg; => #
+                     ----
+                     Upload/Download Saved Data => #
+                     Check for Update => #
+                     Health and Safety => #
+                     Intellectual Property Notices => #
+                     Delete => javascript:$('#game-overwatch').css({display: 'none'}); offcontextmenu();
+                     Information => #
+                     "
+       >
+    <div class="item-img overwatch"></div>
+    <div class="item-subtitle">Start</div>
+    <span class="item-title">Overwatch&reg;</span>
+  </div>
+
+  <!-- Rocket League -->
+  <div id="game-rocket_league" class="menu-item"
+       context-menu="
+                     Start Rocket League => #
+                     ----
+                     Upload/Download Saved Data => #
+                     Check for Update => #
+                     Health and Safety => #
+                     Intellectual Property Notices => #
+                     Delete => javascript:$('#game-rocket_league').css({display: 'none'}); offcontextmenu();
+                     Information => #
+                     "
+       >
+    <div class="item-img rocketleague"></div>
+    <div class="item-subtitle">Start</div>
+    <span class="item-title">Rocket League</span>
+  </div>
+
+  <!-- Call of Duty: Black Ops III -->
+  <div id="game-call_of_duty_black_ops_iii" class="menu-item"
+       context-menu="
+                     Start Call of Duty&reg;: Black Ops III => #
+                     ----
+                     Upload/Download Saved Data => #
+                     Check for Update => #
+                     Health and Safety => #
+                     Intellectual Property Notices => #
+                     Delete => javascript:$('#game-call_of_duty_black_ops_iii').css({display: 'none'}); offcontextmenu();
+                     Information => #
+                     "
+       >
+    <div class="item-img cod-bo3"></div>
+    <div class="item-subtitle">Start</div>
+    <span class="item-title">Call of Duty&reg;: Black Ops III</span>
+  </div>
+
+  <!-- Furi -->
+  <div id="game-furi" class="menu-item"
+       context-menu="
+                     Start Furi => #
+                     ----
+                     Upload/Download Saved Data => #
+                     Check for Update => #
+                     Health and Safety => #
+                     Intellectual Property Notices => #
+                     Delete => javascript:$('#game-furi').css({display: 'none'}); offcontextmenu();
+                     Information => #
+                     "
+       >
+    <div class="item-img furi"></div>
+    <div class="item-subtitle">Start</div>
+    <span class="item-title">Furi</span>
+  </div>
+
+  <!-- TV & Video -->
+  <div class="menu-item">
+    <div class="item-img tvv"></div>
+    <div class="item-subtitle ascii">▼</div>
+    <span class="item-title">TV &amp; Video</span>
+
+    <div class="rss">
+
+      <!-- YouTube -->
+      <div id="app-youtube" class="sub-item"
+           context-menu="
+                         Start YouTube => #
+                         ----
+                         Upload/Download Saved Data => #
+                         Check for Update => #
+                         Health and Safety => #
+                         Intellectual Property Notices => #
+                         Delete => javascript:$('#app-youtube').css({display: 'none'}); offcontextmenu();
+                         Information => #
+                         "
+           >
+        <div class="item-img youtube"></div>
+        <span class="item-title">YouTube&trade;</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Outlast 2 -->
+  <div id="game-outlast_2" class="menu-item"
+       context-menu="
+                     Start Outlast 2 => #
+                     ----
+                     Upload/Download Saved Data => #
+                     Check for Update => #
+                     Health and Safety => #
+                     Intellectual Property Notices => #
+                     Delete => javascript:$('#game-outlast_2').css({display: 'none'}); offcontextmenu();
+                     Information => #
+                     "
+       >
+    <div class="item-img outlast"></div>
+    <div class="item-subtitle">Start</div>
+    <span class="item-title">Outlast 2</span>
+  </div>
+
+</div>
+
+<!-- Context menu -->
+<div id="context-menu"></div>
+
+<!-- Loading animation container -->
+<div class="loading-container display">
+  <div class="loading-icon"><img/></div>
+  <div class="loading-icon"><img/></div>
+  <div class="loading-icon"><img/></div>
+  <div class="loading-icon"><img/></div>
+  <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/2000px-Playstation_logo_colour.svg.png"/>
+</div>
+
+<!-- Background -->
+<div id="wave-container">
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
