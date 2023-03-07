@@ -1,0 +1,117 @@
+<!DOCTYPE HTML> 
+<html>
+    <head>
+        <script>
+class MyAnimation {
+   constructor(canvasId){
+        this.canvas = document.getElementById(canvasId);
+        this.context = this.canvas.getContext("2d");
+        this.t = 0;
+        this.timeInterval = 0;
+        this.startTime = 0;
+        this.lastTime = 0;
+        this.frame = 0;
+        this.animating = false;
+        
+        window.requestAnimFrame = (function(callback){
+            return window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.oRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            function(callback){
+                window.setTimeout(callback, 1000 / 60);
+            };
+        })();
+   }
+   getContext(){
+      return this.context;
+   };
+
+   getCanvas(){
+      return this.canvas;
+   };
+
+   clear(){
+       this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+   };
+
+   setDrawStage(func){
+       this.drawStage = func;
+   };
+
+   isAnimating = function(){
+       return this.animating;
+   };
+
+   getFrame(){
+      return this.frame;
+   };
+
+   start(){
+        this.animating = true; 
+        let date = new Date();
+        this.startTime = date.getTime();
+        this.lastTime = this.startTime;
+        
+        if (this.drawStage !== undefined) {
+            this.drawStage();
+        }
+        
+        this.animationLoop();
+   };
+
+   stop(){
+       this.animating = false;
+   };
+
+   getTimeInterval(){
+       return this.timeInterval;
+   };
+
+   getTime(){
+    return this.t;
+   };
+
+   getFps(){
+      return this.timeInterval > 0 ? 1000 / this.timeInterval : 0;
+   };
+
+   animationLoop(){
+        let that = this;
+        
+        this.frame++;
+        let date = new Date();
+        let thisTime = date.getTime();
+        this.timeInterval = thisTime - this.lastTime;
+        this.t += this.timeInterval;
+        this.lastTime = thisTime;
+        
+        if (this.drawStage !== undefined) {
+            this.drawStage();
+        }
+        
+        if (this.animating) {
+            requestAnimFrame(function(){
+                that.animationLoop();
+            });
+        }
+    }   
+}         
+        </script>
+        <script>
+            window.onload = function(){
+                let anim = new Animation("myCanvas");
+                 
+                anim.setDrawStage(function(){
+                   
+                });
+                anim.start();
+            };
+        </script>
+    </head>
+    <body>
+        <canvas id="myCanvas" width="600" height="250" style="border:1px solid black;">
+        </canvas>
+    </body>
+</html>
