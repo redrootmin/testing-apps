@@ -1,0 +1,735 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #0e6cc4;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+header{
+	height: 3em;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+header div{
+	height: 100%;
+	display: inline-block;
+}
+
+#plus{
+	width: 3em;
+	background-image: url("https://s20.postimg.org/9jdjr9lml/plus.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+}
+
+#info{
+	width: 3em;
+	background-image: url("/image/info.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+}
+
+#textInfo{
+	color: white;
+	font-family: arial;
+	width: 25%;
+	float: left;
+	line-height: 3em;
+}
+
+#friends{
+	width: 3em;
+	background-image: url("/image/friends.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+}
+
+#user{
+	margin-left: 1em;
+	width: 3em;
+	background-image: url("https://s20.postimg.org/yvwsexlfh/user.png");
+	background-size: 140%;
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+}
+
+#userName{
+	color: white;
+	font-family: arial;
+	width: 25%;
+	float: left;
+	line-height: 3em;
+}
+
+#trophies{
+	margin-left: 1em;
+	width: 3em;
+	background-image: url("/image/trophy.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+}
+
+#clock{
+	font-family: arial;
+	line-height: 3em;
+	float: right;
+	margin-right: 1em;
+	color: white;;
+}
+
+/*ENF OF HEADER********************************/
+
+#games{
+	width: 1120em;
+	position: absolute;
+	top: .5em;
+	left: 0;
+	padding: 5em;
+	z-index: 99;
+	
+}
+
+.squareGame{
+	height: 11em;
+	width: 11em;
+	vertical-align: top;
+	display: inline-block;
+	transition: 0.3s ease;
+}
+
+.squareGame:hover{
+	height: 16.5em;
+	width: 15em;
+	border: 3px solid white;
+	cursor: pointer;
+}
+
+.squareGame:hover .imgGame{
+	height: 85%;
+}
+
+.imgGame{
+	height: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.gameText{
+	color: white;
+	font-family: arial;
+	text-align: center;
+	line-height: 2.4em;
+	background-color: rgba(255,255,255,.2);
+}
+
+.gameTitle{
+	position: absolute;
+	color: white;
+	font-size: 1.2em;
+	font-family: Arial;
+	transform: translate(13.2em,-1.5em);
+}
+/*SQUARE IMAGE*****************************************/
+
+.ascii{
+	font-weight: bold;
+}
+
+.ps{
+	background-image: url("/image/ps.png");
+}
+
+.new{
+	background-image: url("/image/new.png");
+}
+
+.overwatch{
+	background-image: url("/image/overwatch.png");
+}
+
+.rocketLeague{
+	background-image: url("/image/rl.png");
+}
+
+.cod{
+	background-image: url("/image/cod.png");
+}
+
+.furi{
+	background-image: url("/image/furi.png");
+}
+
+.youtube{
+	background-image: url("/image/yt.png");
+}
+
+.bro{
+	background-image: url("/image/bro.png");
+}
+
+.outlast{
+	background-image: url("/image/outlast.png");
+}
+
+.storeGame{
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#god{
+	background-image: url("/image/god.png");
+}
+
+#raider{
+	background-image: url("/image/tomb.png");
+}
+
+#codi{
+	background-image: url("/image/if.png");
+}
+
+#mafia{
+	background-image: url("/image/mafia.png");
+}
+
+#destiny{
+	background-image: url("/image/destiny.png");
+}
+
+#bt1{
+	background-image: url("/image/b1.png");
+}
+
+#lg{
+	background-image: url("/image/horizon.png");
+}
+
+#per{
+	background-image: url("/image/per.png");
+}
+
+/*store*/
+
+#store{
+	padding: 1em;
+	padding-top: 6em;
+	margin-top: -3em;
+	width: 60em;
+	height: 25em;
+	padding-left: 12em;
+}
+
+#store div{
+	float: left;
+	border: 3px solid rgba(245,245,245,1);
+	width: 12em;
+	height: 12em;
+	display: inline-block;
+}
+
+#store div:hover{
+	transform: scale(1.1, 1.1);
+	box-shadow: 0px 5px 10px 3px rgba(45,45,45,.7);
+	transition: 0.3s ease;
+}
+
+/*waves****************************/
+
+
+.box {
+	position: fixed;
+	top: 0;
+	transform: rotate(80deg);
+	left: 0;
+}
+
+.wave {
+	position: fixed;
+	top: 0;
+	left: 0;
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  background: #0af;
+  width: 1500px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 7000ms infinite linear;
+}
+
+.wave.-three {
+  animation: drift 7500ms infinite linear;
+	position: fixed;
+	background-color: #77daff;
+}
+
+.wave.-two {
+  animation: drift 3000ms infinite linear;
+  opacity: .1;
+  background: black;
+	position: fixed;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+/*LOADING SPACE*/
+
+.contain {
+	animation-delay: 4s;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  background: #25a7d7;
+  background: -webkit-linear-gradient(#25a7d7, #2962FF);
+  background: linear-gradient(#25a7d7, #25a7d7);
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 5px;
+}
+
+/*Animation*/
+.icon:nth-child(2) img {-webkit-animation-delay: 0.2s;animation-delay: 0.2s}
+.icon:nth-child(3) img {-webkit-animation-delay: 0.3s;animation-delay: 0.3s}
+.icon:nth-child(4) img {-webkit-animation-delay: 0.4s;animation-delay: 0.4s}
+
+.icon img {
+  -webkit-animation: anim 2s ease infinite;
+  animation: anim 2s ease infinite;
+  -webkit-transform: scale(0,0) rotateZ(180deg);
+  transform: scale(0,0) rotateZ(180deg);
+}
+
+@-webkit-keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+@keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+/* BODY-2 */
+
+*::-webkit-scrollbar, *::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0);
+
+  height: 5px;
+  width:  5px;
+}
+
+*::-webkit-scrollbar-track {
+  opacity: 0.3;
+}
+
+*::-webkit-scrollbar-track-piece:start, *::-webkit-scrollbar-track-piece:end {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+}
+
+*::-webkit-scrollbar-thumb {
+  background:    #FFF;
+  border-radius: 0;
+}
+
+*::-webkit-scrollbar-button {
+  background: rgba(0,0,0,0);
+}
+
+/* ICONS */
+
+#plus, #info, #friends {
+  background-position: center;
+  background-repeat:   no-repeat;
+  background-size:     contain;
+
+  float: left;
+
+  width: 3em;
+}
+
+#plus {
+  background-image: url("https://s20.postimg.org/9jdjr9lml/plus.png");
+}
+
+#info {
+  background-image: url("https://s20.postimg.org/xfgoj1t4t/info.png");
+}
+
+#notifications {
+  color:       #FFF;
+  font-family: Arial;
+  overflow: hidden;
+
+  float: left;
+
+  line-height: 3em;
+  width:       25%;
+}
+
+#friends {
+  background-image: url("https://s20.postimg.org/71wqmvvel/friends.png");
+  color:            #FFF;
+
+  text-align: left;
+}
+
+#user {
+  background-image:    url("https://s20.postimg.org/yvwsexlfh/user.png");
+  background-position: center;
+  background-repeat:   no-repeat;
+  background-size:     140%;
+
+  float:       left;
+  margin-left: 1em;
+
+  width: 3em;
+}
+
+#username {
+  color:       #FFF;
+  font-family: Arial;
+
+  float: left;
+
+  line-height: 3em;
+  width:       25%;
+}
+
+#trophies {
+  background-image:    url("https://s20.postimg.org/4d6ztyw8t/trophy.png");
+  background-position: center;
+  background-repeat:   no-repeat;
+  background-size:     contain;
+
+  float:       left;
+  margin-left: 1em;
+
+  width: 3em;
+}
+
+#clock {
+  color:       #FFF;
+  font-family: Arial;
+
+  float:        right;
+  margin-right: 3em;
+
+  line-height: 3em;
+}
+
+/* HEADER */
+
+header {
+  left:     0;
+  padding:  1em;
+  position: fixed;
+  top:      0;
+  z-index:  18;
+
+  height: 3em;
+  width:  100%;
+
+  transition: 0.5s;
+}
+
+header div {
+  display: inline-block;
+
+  height: 100%;
+}
+
+/* OPTIONS MENU */
+
+#context-menu {
+  background:  #000;
+  border:      none;
+  border-left: 1px solid #fff;
+  color:       #FFF;
+  opacity:     0;
+
+  left:     86em;
+  position: fixed;
+  top:      0;
+  z-index:  36;
+
+  height: 100%;
+  width:  25em;
+
+  transition: 0.5s ease;
+}
+
+#context-menu.display {
+  opacity: 1;
+
+  left: 61em;
+}
+
+#context-menu a {
+  color:           inherit;
+  text-decoration: inherit;
+
+  width: 100%;
+}
+
+#context-menu hr {
+  background:   #444;
+  border-color: #444;
+
+  margin-left: 0;
+
+  width: 80%;
+}
+
+/* XMB MENU */
+
+#xmb-menu {
+  left:     0;
+  position: absolute;
+  top:      0.5em;
+  z-index:  9;
+
+  padding: 5em;
+
+  width: 1024em;
+}
+
+.menu-item {
+  display: inline-block;
+
+  vertical-align: top;
+
+  height: 11em;
+  width:  11em;
+
+  transition: height 0.5s ease, width 0.5s ease;
+}
+
+#context-menu .menu-item {
+  display: block;
+
+  margin-left:   -1em;
+  padding:        1em;
+  vertical-align: middle;
+
+  height:      1em;
+  line-height: 1;
+  width:       80%;
+}
+
+.menu-item:hover, .menu-item.focus {
+  border: 3px solid #FFF;
+  cursor: pointer;
+
+  margin: -3px;
+
+  height: inherit;
+  width:  inherit;
+}
+
+.menu-item:not(.context-menu):hover, .menu-item.focus:not(.context-menu) {
+  height: 16.5em;
+  width:  15em;
+}
+
+.menu-item:before {
+  content: "";
+
+  margin-left: -3px;
+  margin-top:  -3px;
+  position:     absolute;
+  z-index:      27;
+
+  height: inherit;
+  width:  inherit;
+}
+
+.menu-item:not(.context-item):hover:before, .menu-item.focus:not(.context-item):before {
+  margin:  inherit;
+  padding: inherit;
+
+  height: inherit;
+  width:  inherit;
+
+  animation:       border-animation 5s infinite cubic-bezier(0.1, 0.7, 0.5, 1.0);
+  animation-delay: 5s;
+}
+
+.menu-item.context-item:hover:before, .menu-item.focus.context-item:before {
+  left:        1.5em;
+  margin:      0;
+  margin-top: -1em;
+  padding:     1em 1.5em;
+
+  height: 1em;
+  width:  17.2em;
+
+  animation:       sub-border-animation 5s infinite cubic-bezier(0.1, 0.7, 0.5, 1.0);
+  animation-delay: 5s;
+}
+
+/* XMB ITEM ANIMATION */
+
+@-webkit-keyframes border-animation {
+  0% {
+    border: 3px solid #FFF;
+  }
+
+  100% {
+    border: 1px rgba(255, 255, 255, 0);
+
+    padding: 1em;
+
+    margin-left: -1em;
+    margin-top:  -1em;
+  }
+}
+
+@keyframes border-animation {
+  0% {
+    border: 3px solid #FFF;
+  }
+
+  100% {
+    border: 1px rgba(255, 255, 255, 0);
+
+    padding: 1em;
+
+    margin-left: -1em;
+    margin-top:  -1em;
+  }
+}
+
+@-webkit-keyframes sub-border-animation {
+  0% {
+    border: 3px solid #FFF;
+  }
+
+  100% {
+    border: 1px rgba(255, 255, 255, 0);
+
+    margin-left: -0.5em;
+    margin-top: -1.75em;
+    padding: 1.5em 2em;
+  }
+}
+
+@keyframes sub-border-animation {
+  0% {
+    border: 3px solid #FFF;
+  }
+
+  100% {
+    border: 1px rgba(255, 255, 255, 0);
+
+    margin-left: -0.5em;
+    margin-top: -1.75em;
+    padding: 1.5em 2em;
+  }
+}
+
+/* XMB ITEMS */
+
+.item-img {
+  background-position: center;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+
+  height: 100%;
+}
+
+.item-subtitle {
+  background-color: rgba(0, 0, 0, 0.6);
+  color:            #FFF;
+  font-family:      Arial;
+  text-align:       center;
+
+  line-height: 2.4em;
+  margin-top: -2.4em;
+}
+
+.item-title {
+  color:       #FFF;
+  font-size:   1.2em;
+  font-family: Arial;
+
+  position:  absolute;
+  transform: translate(13.2em,
