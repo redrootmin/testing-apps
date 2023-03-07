@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>html5</title>
+		<meta charset="UTF-8">
+		<style>
+		/* Set height of body and the document to 100% */
+
+		</style>
+
+	</head>
+
+<body>
+
+	<h1>No Controller Connected</h1>
+
+</body>
+
+
+<script type="text/javascript">
+
+// global gamepad object
+
+let gamepadIndex;
+
+window.addEventListener('gamepadconnected', (event) => {
+
+	gamepadIndex = event.gamepad.index;
+
+});
+
+
+setInterval(() => {
+
+	if(gamepadIndex !== undefined) {
+
+		// a gamepad is connected and has an index
+
+		const myGamepad = navigator.getGamepads()[gamepadIndex];
+
+		document.body.innerHTML = ""; // reset page
+
+		myGamepad.buttons.map(e => e.pressed).forEach((isPressed, buttonIndex) => {
+
+			if(isPressed) {
+
+				// button is pressed; indicate this on the page
+
+				document.body.innerHTML += `<h1>Button ${buttonIndex} is pressed</h1>`;
+
+			}
+
+		})
+
+	}
+
+}, 100) // print buttons that are pressed 10 times per second
+
+</script>
+</html> 
+
