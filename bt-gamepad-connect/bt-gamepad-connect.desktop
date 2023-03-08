@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=bt-gamepad-connect
+Comment=bt-gamepad-connect
+Categories=Utility;System;
+Exec=bt-gamepad-connect
+Terminal=true
+Icon=/home/gamer/bzu-gmb-utils/bt-gamepad-connect/xboxdrv_logo.png

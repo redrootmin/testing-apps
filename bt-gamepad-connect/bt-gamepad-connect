@@ -1,0 +1,10 @@
+#!/bin/bash
+#creator by RedRoot(Yaciyna Mikhail) for GAMER STATION [on linux] and Gaming Community OS Linux
+# GPL-3.0 License
+# bluetoothctl list
+# bluetoothctl devices
+# bluetoothctl scan on
+bluetoothctl trust BA:34:22:81:63:25
+bluetoothctl connect BA:34:22:81:63:25
+bluetoothctl devices Connected
+
