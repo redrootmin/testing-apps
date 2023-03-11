@@ -624,11 +624,11 @@
                 }
 
                 if (dirty & /*buttonMap*/ 1) {
-                    toggle_class(button2, "on", /*buttonMap*/ ctx[0].x);
+                    toggle_class(button3, "on", /*buttonMap*/ ctx[0].x);
                 }
 
                 if (dirty & /*buttonMap*/ 1) {
-                    toggle_class(button3, "on", /*buttonMap*/ ctx[0].y);
+                    toggle_class(button2, "on", /*buttonMap*/ ctx[0].y);
                 }
 
                 if (dirty & /*buttonMap*/ 1) {
