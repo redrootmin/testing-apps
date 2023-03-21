@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Pure CSS Toggle Multi-Switch - RH Brand</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Overpass'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<fieldset class="multiswitch">
+  <legend>Account level</legend>
+
+  <div class="slide-container">
+    <input type="radio" name="account" id="account1" checked>
+    <label for="account1">Basic</label>
+    <input type="radio" name="account" id="account2">
+    <label for="account2">Plus</label>
+    <input type="radio" name="account" id="account3">
+    <label for="account3">Premium</label>
+    <!-- try taking out some of these options -->
+    <input type="radio" name="account" id="account4">
+    <label for="account4">Ultra</label>
+    <input type="radio" name="account" id="account5">
+    <label for="account5">Superior</label>
+    <input type="radio" name="account" id="account6">
+    <label for="account6">Legendary</label>
+    <!-- leave this "slide" -->
+    <a class="slide" aria-hidden="true"></a>
+  </div>
+</fieldset>
+
+<fieldset class="multiswitch" data-theme="stoplight">
+  <legend>Stoplight</legend>
+
+  <div class="slide-container">
+    <input type="radio" name="stoplight" id="stoplight1" checked>
+    <label for="stoplight1">Stop</label>
+    <input type="radio" name="stoplight" id="stoplight2">
+    <label for="stoplight2">Warning</label>
+    <input type="radio" name="stoplight" id="stoplight3">
+    <label for="stoplight3">Go</label>
+    <!-- leave this "slide" -->
+    <a class="slide" aria-hidden="true"></a>
+  </div>
+</fieldset>
+<!-- partial -->
+  <script src='https://use.fontawesome.com/facf9fa52c.js'></script>
+</body>
+</html>
