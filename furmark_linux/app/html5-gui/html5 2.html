@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script type="text/javascript" src="https://rawgithub.com/mrdoob/three.js/master/build/three.js"></script><script type="text/javascript">
+ 
+            //create the scene
+            var scene = new THREE.Scene();
+ 
+            //create the camera   (field of view, aspect ratio, far clipping plane, )
+            var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+ 
+            //create the renderer
+            //var renderer = new THREE.WebGLRenderer();
+            var renderer = new THREE.CanvasRenderer();
+            renderer.setSize( window.innerWidth, window.innerHeight );
+ 
+            //add the renderer to the stage, (renderer returns a <canvas> element)
+            document.body.appendChild( renderer.domElement );
+ 
+            /* ---------- Add a cube --------------*/
+ 
+            //add the geometry, this is an object that contains all the verticies and faces. pass in the size of the faces
+            var geometry = new THREE.CubeGeometry(10,10,10);
+ 
+            //create the material
+            var material = new THREE.MeshBasicMaterial( { vertexColors: THREE.FaceColors, overdraw: 0.5 } );
+ 
+                //give each face a colour, (each square face is made of 2 triangle faces)
+                geometry.faces[ 0 ].color.setHex( 0xff0000 );
+                geometry.faces[ 1 ].color.setHex( 0xff0000 );
+ 
+                geometry.faces[ 2 ].color.setHex( 0x00baff);
+                geometry.faces[ 3 ].color.setHex( 0x00baff);
+ 
+                geometry.faces[ 4 ].color.setHex( 0x0000ff);
+                geometry.faces[ 5 ].color.setHex( 0x0000ff);
+ 
+                geometry.faces[ 6 ].color.setHex( 0xff6600);
+                geometry.faces[ 7 ].color.setHex( 0xff6600);
+ 
+                geometry.faces[ 8 ].color.setHex( 0xff00ff);
+                geometry.faces[ 9 ].color.setHex( 0xff00ff);
+ 
+                geometry.faces[ 10 ].color.setHex( 0x91d50e);
+                geometry.faces[ 11 ].color.setHex( 0x91d50e);
+ 
+            /*
+                for ( var i = 0; i < geometry.faces.length; i += 2 ) {
+ 
+                    var hex = Math.random() * 0xffffff;
+                    geometry.faces[ i ].color.setHex( hex );
+                    geometry.faces[ i + 1 ].color.setHex( hex );
+ 
+                }
+            */
+ 
+            //create the Mesh using the geomety and material
+            var cube = new THREE.Mesh( geometry, material );
+ 
+            //add tge cube to the scene, defaults to coords 0,0,0 (x,y,z)
+            scene.add( cube );
+ 
+            //move the camera back a bit so it is not sitting on the cube, if you see a white canvas try adjusting the camera pos
+            camera.position.z = 20;
+ 
+            /* ---- Render Loop ---- */
+            function render()
+            {
+            //use requestAnimmationFrame instead of SetInterval
+             requestAnimationFrame(render);
+ 
+             //update cube rotation
+             cube.rotation.x += 0.01;
+             cube.rotation.y += 0.02;
+ 
+             //render
+             renderer.render(scene, camera);
+            }
+ 
+            //start the render loop
+            render();
+ 
+// ]]></script>

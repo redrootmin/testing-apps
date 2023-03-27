@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http‑equiv="Content‑Type" content="text/html; charset=UTF‑8" />
+    <title>HTML 5 Reports</title>
+    <script type="text/javascript">
+      const initialize = () => {
+        const data = [
+          { year: "2007", sales: 49 },
+          { year: "2008", sales: 131 },
+          { year: "2009", sales: 294 },
+          { year: "2010", sales: 405 }
+        ];
+        const report = { x: "year", y: "sales", data };
+        generateGraph(report, 350, 300);
+      };
+const generateGraph = (report, maxWidth, maxHeight) => {
+        const { data } = report;
+        const canvas = document.getElementById("graph");
+        const axisBuffer = 20;
+        canvas.height = maxHeight + 100;
+        canvas.width = maxWidth;
+        const context = canvas.getContext("2d");
+
+        const width = 50;
+        const buffer = 20;
+        const i = 0;
+        let x = buffer + axisBuffer;
+        context.font = "bold 12px sans‑serif";
+        context.textAlign = "start";
+
+        data.forEach(item => {
+          context.fillStyle = "rgba(0, 0, 200, 0.9)";
+          context.fillRect(
+            x,
+            maxHeight - item[report.y] / 2,
+            width,
+            item[report.y] / 2
+          );
+          context.fillStyle = "rgba(0, 0, 0, 0.9)";
+          context.fillText(item[report.x], x + width / 4, maxHeight + 15);
+          x += width + buffer;
+        });
+
+        // draw the horizontal axis
+        context.moveTo(axisBuffer, maxHeight);
+        context.lineTo(axisBuffer + maxWidth, maxHeight);
+        context.strokeStyle = "black";
+        context.stroke();
+
+        // draw the vertical axis
+        context.moveTo(axisBuffer, 0);
+        context.lineTo(axisBuffer, maxHeight);
+        context.stroke();
+
+        // draw gridlines
+        const lineSpacing = 50;
+        const numLines = maxHeight / lineSpacing;
+        let y = lineSpacing;
+        context.font = "10px sans‑serif";
+        context.textBaseline = "middle";
+
+        for (let i = 0; i < numLines; i++) {
+          context.strokeStyle = "rgba(0,0,0,0.25)";
+          context.moveTo(axisBuffer, y);
+          context.lineTo(axisBuffer + maxWidth, y);
+          context.stroke();
+          context.fillStyle = "rgba(0,0,0, 0.75)";
+          context.fillText("" + 2 * (maxHeight - y), 0, y);
+          y += lineSpacing;
+        }
+      };
+   </script>
+  </head>
+  <body onload="initialize()">
+    <canvas id="graph"></canvas>
+  </body>
+</html>
+
