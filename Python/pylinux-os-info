@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+#creator by RedRoot(Yaciyna Mikhail) for GAMER STATION [on linux] and Gaming Community OS Linux
+# GPL-3.0 License
+
+from Xlib.display import Display
+import platform
+import sys
+
+print(sys.version)
+screen = Display(':0').screen()
+print(screen.width_in_pixels, screen.height_in_pixels)
+
+def linux_distribution():
+  try:
+    return platform.linux_distribution()
+  except:
+    return "N/A"
+
+def dist():
+  try:
+    return platform.dist()
+  except:
+    return "N/A"
+
+print("""Python version: %s
+dist: %s
+linux_distribution: %s
+system: %s
+machine: %s
+platform: %s
+uname: %s
+version: %s
+mac_ver: %s
+""" % (
+sys.version.split('\n'),
+str(dist()),
+linux_distribution(),
+platform.system(),
+platform.machine(),
+platform.platform(),
+platform.uname(),
+platform.version(),
+platform.mac_ver(),
+))
