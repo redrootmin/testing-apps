@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+#creator by RedRoot(Yaciyna Mikhail) for GAMER STATION [on linux] and Gaming Community OS Linux
+# GPL-3.0 License
+
+from Xlib.display import Display
+import platform
+import sys
+import pygame
+
+print(sys.version)
+screen = Display(':0').screen()
+print(screen.width_in_pixels,"x",screen.height_in_pixels)
+pygame.init()
+(6, 0)
+system_supported_screen = pygame.display.list_modes()
+print (system_supported_screen)
