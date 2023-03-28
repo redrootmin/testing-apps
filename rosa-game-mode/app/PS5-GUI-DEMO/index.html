@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Fully Interactive PS5 UI Concept [INTERFACES]</title>
+  <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="ps5_intro" id="ps5_intro">
+
+  <div id="initial_logo"><i class="fab fa-playstation"></i></div>
+
+  <div class="intro_info" id="intro_info">
+    <i class="fac fa-ps5-alt"></i>
+    <span class="toast">Press the&nbsp<b>PS</b>&nbspbutton to enable your contoller</span>
+  </div>
+
+  <div class="controller_container" id="controller_container">
+    <img src="https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/dualsense.png" id="controller_image">
+    <div class="pulse"></div>
+    <div id="playstation"><i class="fab fa-playstation"></i></div>
+  </div>
+
+</div>
+
+<div class="ps5_ui" id="ps5_ui">
+
+  <div class="background">
+
+    <div class="bg_home_content tab_content" id="bg_home">
+      <div id="game_bg">
+        <div class="black_rect"></div>
+      </div>
+      <div class="white_rect"></div>
+    </div>
+
+    <div class="bg_friends_content tab_content" id="bg_friends">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="67px" height="67px" viewBox="0 0 67 67" style="enable-background:new 0 0 67 67;" xml:space="preserve">
+        <style type="text/css">
+          .st0 {
+            fill: #FFFFFF;
+          }
+        </style>
+
+        <symbol id="bg_triangle" viewBox="0 0 67 67">
+          <path class="st0" d="M0.1,62.2L33.4,4.5l33.5,57.7L0.1,62.2z M33.4,18.9L12.5,55h41.8L33.4,18.9z" />
+        </symbol>
+
+        <symbol id="bg_square" viewBox="0 0 67 67">
+          <path class="st0" d="M62.3,4.5v57.7H4.6V4.5H62.3z M54.8,12H12.1v42.6h42.6V12z" />
+        </symbol>
+
+        <symbol id="bg_circle" viewBox="0 0 67 67">
+          <path id="bg_circle" class="st0" d="M33.5,3c16.7,0,30.2,13.5,30.2,30.2c0,16.7-13.5,30.2-30.2,30.2S3.2,50,3.2,33.3 C3.2,16.6,16.7,3,33.5,3z M55.7,33.3C55.7,21,45.8,11,33.5,11C21.1,11,11.2,21,11.2,33.3c0,12.3,9.9,22.3,22.3,22.3 C45.8,55.5,55.7,45.6,55.7,33.3z" />
+        </symbol>
+
+        <symbol id="bg_cross" viewBox="0 0 67 67">
+          <path class="st0" d="M57,63L33.5,39.5L10,63l-5.3-5.3l23.5-23.5L4.7,10.7L10,5.4l23.5,23.5L57,5.4l5.3,5.3L38.7,34.2 l23.5,23.6L57,63z" />
+        </symbol>
+      </svg>
+
+      <div class="icon_loader">
+        <div class="icon icon_animate" id="icon1">
+          <svg>
+            <use xlink:href="#bg_triangle" id="svg1" class="svg-icon" />
+          </svg>
+        </div>
+
+        <div class="icon icon_animate" id="icon2">
+          <svg>
+            <use xlink:href="#bg_square" id="svg2" class="svg-icon" />
+          </svg>
+        </div>
+
+        <div class="icon icon_animate" id="icon3">
+          <svg>
+            <use xlink:href="#bg_cross" id="svg3" class="svg-icon" />
+          </svg>
+        </div>
+
+        <div class="icon icon_animate" id="icon4">
+          <svg>
+            <use xlink:href="#bg_circle" id="svg4" class="svg-icon" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg_store_content tab_content" id="bg_store">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="67px" height="67px" viewBox="0 0 67 67" style="enable-background:new 0 0 67 67;" xml:space="preserve">
+        <style type="text/css">
+          .st0 {
+            fill: #FFFFFF;
+          }
+        </style>
+
+        <symbol id="bg_triangle" viewBox="0 0 67 67">
+          <path class="st0" d="M0.1,62.2L33.4,4.5l33.5,57.7L0.1,62.2z M33.4,18.9L12.5,55h41.8L33.4,18.9z" />
+        </symbol>
+
+        <symbol id="bg_square" viewBox="0 0 67 67">
+          <path class="st0" d="M62.3,4.5v57.7H4.6V4.5H62.3z M54.8,12H12.1v42.6h42.6V12z" />
+        </symbol>
+
+        <symbol id="bg_circle" viewBox="0 0 67 67">
+          <path id="bg_circle" class="st0" d="M33.5,3c16.7,0,30.2,13.5,30.2,30.2c0,16.7-13.5,30.2-30.2,30.2S3.2,50,3.2,33.3 C3.2,16.6,16.7,3,33.5,3z M55.7,33.3C55.7,21,45.8,11,33.5,11C21.1,11,11.2,21,11.2,33.3c0,12.3,9.9,22.3,22.3,22.3 C45.8,55.5,55.7,45.6,55.7,33.3z" />
+        </symbol>
+
+        <symbol id="bg_cross" viewBox="0 0 67 67">
+          <path class="st0" d="M57,63L33.5,39.5L10,63l-5.3-5.3l23.5-23.5L4.7,10.7L10,5.4l23.5,23.5L57,5.4l5.3,5.3L38.7,34.2 l23.5,23.6L57,63z" />
+        </symbol>
+      </svg>
+
+      <div class="icon_loader">
+        <div class="icon icon_animate" id="icon1">
+          <svg>
+            <use xlink:href="#bg_triangle" id="svg1" class="svg-icon" />
+          </svg>
+        </div>
+
+        <div class="icon icon_animate" id="icon2">
+          <svg>
+            <use xlink:href="#bg_square" id="svg2" class="svg-icon" />
+          </svg>
+        </div>
+
+        <div class="icon icon_animate" id="icon3">
+          <svg>
+            <use xlink:href="#bg_cross" id="svg3" class="svg-icon" />
+          </svg>
+        </div>
+
+        <div class="icon icon_animate" id="icon4">
+          <svg>
+            <use xlink:href="#bg_circle" id="svg4" class="svg-icon" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg_settings_content tab_content" id="bg_settings">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="67px" height="67px" viewBox="0 0 67 67" style="enable-background:new 0 0 67 67;" xml:space="preserve">
+        <style type="text/css">
+          .st0 {
+            fill: #FFFFFF;
+          }
+        </style>
+
+        <symbol id="bg_triangle" viewBox="0 0 67 67">
+          <path class="st0" d="M0.1,62.2L33.4,4.5l33.5,57.7L0.1,62.2z M33.4,18.9L12.5,55h41.8L33.4,18.9z" />
+        </symbol>
+
+        <symbol id="bg_square" viewBox="0 0 67 67">
+          <path class="st0" d="M62.3,4.5v57.7H4.6V4.5H62.3z M54.8,12H12.1v42.6h42.6V12z" />
+        </symbol>
+
+        <symbol id="bg_circle" viewBox="0 0 67 67">
+          <path id="bg_circle" class="st0" d="M33.5,3c16.7,0,30.2,13.5,30.2,30.2c0,16.7-13.5,30.2-30.2,30.2S3.2,50,3.2,33.3 C3.2,16.6,16.7,3,33.5,3z M55.7,33.3C55.7,21,45.8,11,33.5,11C21.1,11,11.2,21,11.2,33.3c0,12.3,9.9,22.3,22.3,22.3 C45.8,55.5,55.7,45.6,55.7,33.3z" />
+        </symbol>
+
+        <symbol id="bg_cross" viewBox="0 0 67 67">
+          <path class="st0" d="M57,63L33.5,39.5L10,63l-5.3-5.3l23.5-23.5L4.7,10.7L10,5.4l23.5,23.5L57,5.4l5.3,5.3L38.7,34.2 l23.5,23.6L57,63z" />
+        </symbol>
+      </svg>
+
+      <div class="icon_loader">
+        <div class="icon icon_animate" id="icon1">
+          <svg>
+            <use xlink:href="#bg_triangle" id="svg1" class="svg-icon" />
+          </svg>
+        </div>
+
+        <div class="icon icon_animate" id="icon2">
+          <svg>
+            <use xlink:href="#bg_square" id="svg2" class="svg-icon" />
+          </svg>
+        </div>
+
+        <div class="icon icon_animate" id="icon3">
+          <svg>
+            <use xlink:href="#bg_cross" id="svg3" class="svg-icon" />
+          </svg>
+        </div>
+
+        <div class="icon icon_animate" id="icon4">
+          <svg>
+            <use xlink:href="#bg_circle" id="svg4" class="svg-icon" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="foreground">
+
+    <div class="top_bar" id="top_bar">
+      <div class="profile">
+        <img src="https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/ps5-user-profile.jpg">
+      </div>
+
+      <div class="l1r1_tabs_list">
+        <i class="fac fa-l1"></i>
+        <div class="tab active" id="default" onclick="switchTabs('bg_home', 'fg_home', this)" active-color="#fff">Home
+
+        </div>
+        <div class="tab" onclick="switchTabs('bg_friends', 'fg_friends', this)" active-color="rgba(0, 0, 0, .8)">Friends
+
+        </div>
+        <div class="tab" onclick="switchTabs('bg_store', 'fg_store', this)" active-color="rgba(0, 0, 0, .8)">Store
+
+        </div>
+        <div class="tab" onclick="switchTabs('bg_settings', 'fg_settings', this)" active-color="rgba(0, 0, 0, .8)">Settings
+
+        </div>
+        <span class="tab_indicator"></span>
+        <i class="fac fa-r1"></i>
+      </div>
+
+      <span id="time"></span>
+    </div>
+
+    <div class="fg_home_content tab_content xyz" id="fg_home">
+
+      <div class="games_list">
+        <div class="games_slider">
+
+          <div class="game_card" style="background-image: url(https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/PS5%20Covers/swbf1-cov.jpg);">
+          </div>
+
+          <div class="game_card" style="background-image: url(https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/PS5%20Covers/swbf2-cov.jpg);">
+          </div>
+
+          <div class="game_card" style="background-image: url(https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/PS5%20Covers/jedi-cov.jpg);">
+          </div>
+
+          <div class="game_card" style="background-image: url(https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/PS5%20Covers/horizon-cov.jpg);">
+          </div>
+
+          <div class="game_card" style="background-image: url(https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/PS5%20Covers/dthstr-cov.jpg);">
+          </div>
+
+          <div class="game_card" style="background-image: url(https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/PS5%20Covers/spid-cov.jpg);">
+          </div>
+
+          <div class="game_card" style="background-image: url(https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/PS5%20Covers/tsus-cov.jpg);">
+          </div>
+
+          <div class="game_card" style="background-image: url(https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/PS5%20Covers/ass-cov.jpg);">
+          </div>
+
+          <div class="game_card" style="background-image: url(https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/PS5%20Covers/mgs5-cov.jpg);">
+          </div>
+
+          <div class="game_card" style="background-image: url(https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/PS5%20Covers/hit2-cov.jpg);">
+          </div>
+
+          <div class="game_card" style="background-image: url(https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/PS5%20Covers/rdr2-cov.jpg);">
+          </div>
+
+          <div class="game_card" style="background-image: url(https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/PS5%20Covers/sek-cov.jpg);">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="games_actions_details">
+
+        <div class="games_actions">
+          <span><i class="fac fa-ps5-square"></i>Full game details</span>
+          <span><i class="fac fa-ps5-triangle"></i>Game settings</span>
+          <span><i class="fac fa-ps5-circle"></i>Back</span>
+        </div>
+
+        <div class="games_details">
+
+          <div class="header">
+            <p id="game_play_time"></p>
+            <h1 id="game_name"></h1>
+            <div class="game_start_button">
+              <span><i class="fac fa-ps5-cross"></i>Start game</span>
+            </div>
+          </div>
+
+          <div class="player_progress">
+            <div class="player_progress_card" id="last_checkpoint" style="margin: 0 1rem 0 0;">
+              <img id="last_checkpoint_img">
+              <p id="last_checkpoint_text">Last Checkpoint</p>
+              <h1 id="last_checkpoint_name"></h1>
+              <p id="last_checkpoint_time"></p>
+            </div>
+
+            <div class="player_progress_card" id="last_trophy">
+              <img id="last_trophy_img">
+              <p id="last_trophy_text">Last earned trophy</p>
+              <h1 id="last_trophy_name"></h1>
+              <p id="last_trophy_time"></p>
+            </div>
+
+            <div class="player_progress_card" id="top_trophy">
+              <img id="top_trophy_img">
+              <p id="top_trophy_text">Top earned trophy</p>
+              <h1 id="top_trophy_name"></h1>
+              <p id="top_trophy_time"></p>
+            </div>
+
+            <div class="player_progress_card" id="all_trophies" style="margin: 0 0 0 1rem;">
+              <img id="all_trophies_img" src="https://raw.githubusercontent.com/RaduBratan/CodePen-PS5-UI-concept-assets/master/ps5-all-trophies.png">
+              <p id="all_trophies_text">All earned trophies</p>
+              <p id="all_trophies_numbers"></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="fg_friends_content tab_content xyz" id="fg_friends">
+      <div class="notification_text">
+        <p>Sorry but you have</p>
+        <h1><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">no friends. oof.</a></h1>
+      </div>
+    </div>
+
+    <div class="fg_store_content tab_content xyz" id="fg_store">
+      <div class="notification_text">
+        <p>The store is closed.</p>
+        <h1><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Come back tomorrow.</a></h1>
+      </div>
+    </div>
+
+    <div class="fg_settings_content tab_content xyz" id="fg_settings">
+      <div class="notification_text">
+        <p>Empty settings.</p>
+        <h1><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Yes, empty settings.</a></h1>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js'></script>
+<script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
+<script src='https://use.fontawesome.com/releases/v5.2.0/js/all.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
