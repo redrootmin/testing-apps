@@ -265,23 +265,23 @@ a:visited {
   transform: scaleX(-1) scaleY(1) rotate(-69deg);
 }
 
-@-webkit-keyframes svelte-1xis06h-flash {
+/* @-webkit-keyframes svelte-1xis06h-flash {
   0% {
     opacity: 0;
   }
   25% {
     opacity: 1;
   }
-}
+} */
 
-@keyframes svelte-1xis06h-flash {
+/* @keyframes svelte-1xis06h-flash {
   0% {
     opacity: 0;
   }
   25% {
     opacity: 1;
   }
-}
+} */
 body,
 html {
   width: 100%;
