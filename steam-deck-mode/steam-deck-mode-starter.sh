@@ -10,5 +10,6 @@ resolution_x=`echo "$screen_native" | egrep -o "[0-9]+x[0-9]+" | cut -d x -f 1`
 resolution_y=`echo "$screen_native" | egrep -o "[0-9]+x[0-9]+" | cut -d x -f 2`
 echo "resolution_x:$resolution_x"
 echo "resolution_y:$resolution_y"
-gamescope -b -U -W "$resolution_x" -H "$resolution_y" --steam -f -- steam -steamos -gamepadui &while true;do sleep 1;echo "work bluetouch";bluetoothctl connect 98:B6:EA:6B:8D:0B;done
+gamescope -b -U -W "$resolution_x" -H "$resolution_y" --steam -f -- steam -steamos -gamepadui 
+#&while true;do sleep 1;echo "work bluetouch";bluetoothctl connect 98:B6:EA:6B:8D:0B;done
 #steam -full -steamos -gamepadui &while true;do sleep 1;echo "work bluetouch";bluetoothctl connect 98:B6:E8:6B:8D:0B;done
