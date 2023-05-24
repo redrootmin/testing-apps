@@ -19,10 +19,11 @@ echo "полное назваие программы - $FULL_NAME_APP"
 if [ ! -d "/home/${USER}/.kmv-config" ]
 then
 #! папки .kmv-config нет окружении пользователя, создаем!
-tput setaf 1; echo "папки .kmv-config нет окружении пользователя, создаем";tput sgr0
+tput setaf 1; echo "папки .kmv-config нет в окружении пользователя $USER, создаем";tput sgr0
 mkdir -p "/home/${USER}/.kmv-config"
 PATH_USER_CONF="/home/${USER}/.kmv-config"
 cp -RT "$PATH_CORE_APP/data/.kmv-config" "$PATH_USER_CONF"
+ln -s "/home/$USER/.kmv-config" "$PATH_CORE_APP/.kmv-config"
 tput setaf 2; echo "папка конфигурации пользователя расположена [$PATH_USER_CONF]";tput sgr0
 else
 PATH_USER_CONF="/home/${USER}/.kmv-config"
