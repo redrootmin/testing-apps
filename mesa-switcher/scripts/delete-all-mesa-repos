@@ -1,0 +1,12 @@
+#!/bin/bash
+#creator by RedRoot(Yaciyna Mikhail) for GAMER STATION [on linux] and Gaming Community OS Linux
+# GPL-3.0 License
+
+pass_user0="$1"
+script_dir=$(cd $(dirname "$0") && pwd);
+(
+sudo rm -f /etc/yum.repos.d/*mesa*.repo || true
+ls /etc/yum.repos.d/ | grep "mesa"
+echo "${pass_user}" | sudo -S dnf autoremove -y
+echo "${pass_user}" | sudo -S dnf clean packages
+) | zenity --progress --title="СКРИПТ УДАЛЕНИЕ MESA REPOS" --text="Идет удаление всех репозиториев связанных с MESA, ожидайте." --percentage=0 --no-cancel --auto-close --pulsate
