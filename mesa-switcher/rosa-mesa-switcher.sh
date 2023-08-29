@@ -58,7 +58,11 @@ GTK_THEME="Adwaita-dark" ${YAD} --title="скрипт запущен в Wayland!
 
 # функция с меню программы
 function gui_app_generator () {
+#переменные
+script_dir=$1
 KEY_GUI=`echo $RANDOM`
+#загружаем список репозиториев из файла в массив
+readarray -t repos_list < "${script_dir}/config/repos-list"
 # tabs1
 yad --center --window-icon=$icon1 --title="$name_app" --form --width=512 \
 --image="$image1" --image-on-top \
