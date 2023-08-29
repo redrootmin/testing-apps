@@ -29,7 +29,7 @@ tput setaf 2;echo "Операциооная система: ${linuxos_version} �
 tput sgr 0
 linuxos_run0="rosa"
 export linuxos_run=$linuxos_run0
-linux_os_conf0="$linuxos_run-config"
+linux_os_conf0="$linuxos_run_config"
 export linux_os_conf=$linux_os_conf0
 
 else
@@ -49,6 +49,12 @@ exit 0
 else 
 export pass_user=${pass_user0}
 fi
+
+# функция с предложением перезагрузиться.
+function info_reboot () {
+script_dir=$1
+GTK_THEME="Adwaita-dark" ${YAD} --title="скрипт запущен в Wayland!" --image-on-top --picture --size=fit --filename="${script_dir}/images/xorg-wayland.png" --width=450 --height=327 --center --inc=256  --text-align=center --text="Данный скрипт работает только в сессии X.org" --timeout=10 --timeout-indicator=bottom
+}
 
 # функция с меню программы
 function gui_app_generator () {
