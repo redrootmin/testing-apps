@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Table morphs into graph... without a lot of weirdness</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<input type="radio" name="switch" id="switch-table" checked hidden>
+<input type="radio" name="switch" id="switch-bar" hidden>
+<input type="radio" name="switch" id="switch-scatter" hidden>
+<!-- <input type="radio" name="switch" id="switch-line" hidden> -->
+<label for="switch-table">Table</label>
+<label for="switch-bar">Bar</label>
+<label for="switch-scatter">Scatter</label>
+<!-- <label for="switch-line">Line</label> -->
+
+<table>
+	<thead>
+		<tr>
+			<th scope="col">Jan</th>
+			<th scope="col">Feb</th>
+			<th scope="col">Mar</th>
+			<th scope="col">Apr</th>
+			<th scope="col">May</th>
+			<th scope="col">Jun</th>
+			<th scope="col">Jul</th>
+			<th scope="col">Aug</th>
+			<th scope="col">Sep</th>
+			<th scope="col">Oct</th>
+			<th scope="col">Nov</th>
+			<th scope="col">Dec</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+			<td data-th="Jan" data-td="145" scope="row">
+				<div class="data-bar">145</div>
+				<div class="data-scatter">145</div>
+				145
+			</td>
+			<td data-th="Feb" data-td="289">
+				<div class="data-bar">289</div>
+				<div class="data-scatter">289</div>
+				289
+			</td>
+			<td data-th="Mar" data-td="204">
+				<div class="data-bar">204</div>
+				<div class="data-scatter">204</div>
+				204
+			</td>
+			<td data-th="Apr" data-td="17">
+				<div class="data-bar">17</div>
+				<div class="data-scatter">17</div>
+				17
+			</td>
+			<td data-th="May" data-td="30">
+				<div class="data-bar">30</div>
+				<div class="data-scatter">30</div>
+				30
+			</td>
+			<td data-th="Jun" data-td="104">
+				<div class="data-bar">104</div>
+				<div class="data-scatter">104</div>
+				104
+			</td>
+			<td data-th="Jul" data-td="85">
+				<div class="data-bar">85</div>
+				<div class="data-scatter">85</div>
+				85
+			</td>
+			<td data-th="Aug" data-td="189">
+				<div class="data-bar">189</div>
+				<div class="data-scatter">189</div>
+				189
+			</td>
+			<td data-th="Sep" data-td="230">
+				<div class="data-bar">230</div>
+				<div class="data-scatter">230</div>
+				230
+			</td>
+			<td data-th="Oct" data-td="138">
+				<div class="data-bar">138</div>
+				<div class="data-scatter">138</div>
+				138
+			</td>
+			<td data-th="Nov" data-td="212">
+				<div class="data-bar">212</div>
+				<div class="data-scatter">212</div>
+				212
+			</td>
+			<td data-th="Dec" data-td="54">
+				<div class="data-bar">54</div>
+				<div class="data-scatter">54</div>
+				54
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- partial -->
+  <script src='./jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

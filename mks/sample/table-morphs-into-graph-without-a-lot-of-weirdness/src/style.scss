@@ -1,0 +1,240 @@
+$font-url: 'https://fonts.googleapis.com/css?family=Mukta+Malar:300,400,700';
+
+@if variable-exists(font-url) {
+	@import url($font-url);
+}
+
+$black: rgba(0, 0, 0, 1.00);
+$white: rgba(255, 255, 255, 1.00);
+$grey: rgba(36, 36, 36, 1.00);
+$dusk: rgba(29, 29, 29, 1.00);
+$green: rgba(137, 237, 94, 1.00);
+$red: rgba(255, 35, 101, 1.00);
+$blue: rgba(63, 182, 255, 1.00);
+$yellow: rgba(255, 212, 0, 1.00);
+$purple: rgba(202, 42, 255, 1.00);
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 14px;
+}
+
+body {
+	padding: 2rem;
+	background: $grey;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 48px auto 0;
+	padding: 0;
+	width: 100%;
+	table-layout: fixed;
+	background: darken($grey, 5%);
+	border: 1px solid rgba($grey, 0.125);
+}
+
+table tr {
+	background: rgba($grey, 0.25);
+	border-bottom: 1px solid rgba($grey, 0.125);
+
+	&:nth-child(even) {
+		background: $white;
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+table thead tr {
+	// padding: 4px 0;
+	background: $white;
+	border-bottom: 1px solid $grey;
+}
+
+table th,
+table td {
+	padding: 12px;
+	text-align: left;
+}
+
+table th {
+	text-transform: uppercase;
+	color: $white;
+	background: $green;
+	border-bottom: 2px solid $grey;
+}
+
+table td {
+	word-wrap: break-word;
+	color: $white;
+	
+	div {
+		display: none;
+	}
+}
+
+label {
+	display: inline-block;
+	padding: 3px 24px;
+	text-align: center;
+	text-transform: uppercase;
+	color: $white;
+	background: darken($grey, 5%);
+	cursor: pointer;
+	
+	&:hover {
+		color: $white;
+		background: darken($grey, 7.5%);
+	}
+}
+
+input[id*="-table"]:checked ~ label[for*="-table"] {
+	background: $green;
+}
+
+input[id*="-bar"]:checked ~ label[for*="-bar"] {
+	background: $blue;
+}
+
+input[id*="-scatter"]:checked ~ label[for*="-scatter"] {
+	background: $red;
+}
+
+#switch-bar:checked ~ table {
+	width: 100%;
+	max-width: 768px;
+	height: 300px;
+	background: $grey;
+	border: 0;
+	position: relative;
+	
+	tr {
+		padding: unset;
+		border: 0;
+		position: relative;
+	}
+	
+	th {
+		display: none;
+		padding: unset;
+		border: 0;
+	}
+	
+	td {
+		position: relative;
+		padding: unset;
+		color: transparent;
+		border: 0;
+		
+		div.data-bar {
+			position: absolute;
+			bottom: 0;
+			// left: 0;
+			width: calc(100% - 2px);
+			margin: 0 auto;
+			text-align: center;
+			color: $white;
+			background: $blue;
+			display: block;
+			vertical-align: bottom;
+		}
+		
+		&:after {
+			position: absolute;
+			bottom: -30px;
+			content: attr(data-th);
+			display: block;
+			width: calc(100% - 2px);
+			margin: 0 auto;
+			padding: 2px 0 3px;
+			text-align: center;
+			text-transform: uppercase;
+			color: $white;
+			background: darken($grey, 5%);
+		}
+	}
+	
+	@for $column from 1 through 5 {
+		$temp: attr(data-td);
+		
+		td:nth-of-type(#{$column}):before {
+			content: $temp;
+			// height: attr(data-td);
+		}
+	}
+}
+
+#switch-scatter:checked ~ table {
+	width: 100%;
+	max-width: 768px;
+	height: 300px;
+	background: $grey;
+	border: 0;
+	position: relative;
+	
+	tr {
+		padding: unset;
+		border: 0;
+		position: relative;
+	}
+	
+	th {
+		display: none;
+		padding: unset;
+		border: 0;
+	}
+	
+	td {
+		position: relative;
+		padding: unset;
+		color: transparent;
+		border: 0;
+		
+		div.data-scatter {
+			position: absolute;
+			top: unset;
+			bottom: unset;
+			left: 20px;
+			width: calc(100% - 2px);
+			width: 24px;
+			height: 24px;
+			margin: 0 auto;
+			text-align: center;
+			color: $white;
+			background: $red;
+			border-radius: 50%;
+			display: block;
+			vertical-align: bottom;
+		}
+		
+		&:after {
+			position: absolute;
+			bottom: -30px;
+			content: attr(data-th);
+			display: block;
+			width: calc(100% - 2px);
+			margin: 0 auto;
+			padding: 2px 0 3px;
+			text-align: center;
+			text-transform: uppercase;
+			color: $white;
+			background: darken($grey, 5%);
+		}
+	}
+	
+	@for $column from 1 through 5 {
+		$temp: attr(data-td);
+		
+		td:nth-of-type(#{$column}):before {
+			content: $temp;
+			// height: attr(data-td);
+		}
+	}
+}
+

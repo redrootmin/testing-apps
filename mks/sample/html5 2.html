@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<style>
+		/* comments*/
+.toggle {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 15.32px;
+  width: 30.33px;
+  border: 1px solid #b8cfd9;
+  border-radius: 17.5px;
+  background-color: #ffffff;
+}
+
+
+/* After slide changes */
+
+.toggle:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+  transition: all 0.5s;
+  height: 11.62px;
+  width: 11.96px;
+  background-color: #8566c1;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.toggle-checkbox:checked+.toggle::after {
+  left: 59%;
+  background-color: white;
+}
+
+
+/* Checkbox cheked toggle label bg color */
+
+.toggle-checkbox:checked+.toggle {
+  height: 15.32px;
+  width: 30.33px;
+  border-radius: 17.5px;
+  background-color: #8566c1;
+}
+
+
+/* Checkbox vanished */
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-checkbox:checked+.toggle::after {
+  left: 59%;
+  background-color: white;
+}
+
+
+/* Checkbox cheked toggle label bg color */
+
+.toggle-checkbox:checked+.toggle {
+  height: 15.32px;
+  width: 30.33px;
+  border-radius: 17.5px;
+  background-color: #8566c1;
+}
+
+
+/* Checkbox vanished */
+
+.toggle-checkbox {
+  display: none;
+}
+		</style>
+	</head>
+
+	<body>
+<div>
+  <div class="idm-switch_div div-container" onclick="toggled(this)">
+    <input type="checkbox" id="switch" class="toggle-checkbox" />
+    <label for="switch" class="toggle"> </label>
+  </div>
+</div>
+
+
+<div>
+  <div class="idm-switch_div div-container" onclick="toggled(this)">
+    <input type="checkbox" id="switch" class="toggle-checkbox" />
+    <label for="switch" class="toggle"> </label>
+  </div>
+</div>
+
+		<script>
+function toggled(el) {
+  var isChecked = el.parentElement.getElementsByClassName("toggle-checkbox")[0];
+  if (isChecked.checked == true) {
+    isChecked.checked = false;
+  } else {
+    isChecked.checked = true;
+  }
+}
+		</script>
+	</body>
+</html>

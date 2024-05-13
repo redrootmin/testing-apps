@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css?family=Mukta+Malar:300,400,700");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Mukta Malar", sans-serif;
+  font-size: 14px;
+}
+
+body {
+  padding: 2rem;
+  background: #242424;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 48px auto 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  background: #171717;
+  border: 1px solid rgba(36, 36, 36, 0.125);
+}
+
+table tr {
+  background: rgba(36, 36, 36, 0.25);
+  border-bottom: 1px solid rgba(36, 36, 36, 0.125);
+}
+table tr:nth-child(even) {
+  background: white;
+}
+table tr:last-of-type {
+  margin-bottom: 0;
+}
+
+table thead tr {
+  background: white;
+  border-bottom: 1px solid #242424;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  text-transform: uppercase;
+  color: white;
+  background: #89ed5e;
+  border-bottom: 2px solid #242424;
+}
+
+table td {
+  word-wrap: break-word;
+  color: white;
+}
+table td div {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  padding: 3px 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background: #171717;
+  cursor: pointer;
+}
+label:hover {
+  color: white;
+  background: #111111;
+}
+
+input[id*=-table]:checked ~ label[for*=-table] {
+  background: #89ed5e;
+}
+
+input[id*=-bar]:checked ~ label[for*=-bar] {
+  background: #3fb6ff;
+}
+
+input[id*=-scatter]:checked ~ label[for*=-scatter] {
+  background: #ff2365;
+}
+
+#switch-bar:checked ~ table {
+  width: 100%;
+  max-width: 768px;
+  height: 300px;
+  background: #242424;
+  border: 0;
+  position: relative;
+}
+#switch-bar:checked ~ table tr {
+  padding: unset;
+  border: 0;
+  position: relative;
+}
+#switch-bar:checked ~ table th {
+  display: none;
+  padding: unset;
+  border: 0;
+}
+#switch-bar:checked ~ table td {
+  position: relative;
+  padding: unset;
+  color: transparent;
+  border: 0;
+}
+#switch-bar:checked ~ table td div.data-bar {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 2px);
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  background: #3fb6ff;
+  display: block;
+  vertical-align: bottom;
+}
+#switch-bar:checked ~ table td:after {
+  position: absolute;
+  bottom: -30px;
+  content: attr(data-th);
+  display: block;
+  width: calc(100% - 2px);
+  margin: 0 auto;
+  padding: 2px 0 3px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background: #171717;
+}
+#switch-bar:checked ~ table td:nth-of-type(1):before {
+  content: attr(data-td);
+}
+#switch-bar:checked ~ table td:nth-of-type(2):before {
+  content: attr(data-td);
+}
+#switch-bar:checked ~ table td:nth-of-type(3):before {
+  content: attr(data-td);
+}
+#switch-bar:checked ~ table td:nth-of-type(4):before {
+  content: attr(data-td);
+}
+#switch-bar:checked ~ table td:nth-of-type(5):before {
+  content: attr(data-td);
+}
+
+#switch-scatter:checked ~ table {
+  width: 100%;
+  max-width: 768px;
+  height: 300px;
+  background: #242424;
+  border: 0;
+  position: relative;
+}
+#switch-scatter:checked ~ table tr {
+  padding: unset;
+  border: 0;
+  position: relative;
+}
+#switch-scatter:checked ~ table th {
+  display: none;
+  padding: unset;
+  border: 0;
+}
+#switch-scatter:checked ~ table td {
+  position: relative;
+  padding: unset;
+  color: transparent;
+  border: 0;
+}
+#switch-scatter:checked ~ table td div.data-scatter {
+  position: absolute;
+  top: unset;
+  bottom: unset;
+  left: 20px;
+  width: calc(100% - 2px);
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  background: #ff2365;
+  border-radius: 50%;
+  display: block;
+  vertical-align: bottom;
+}
+#switch-scatter:checked ~ table td:after {
+  position: absolute;
+  bottom: -30px;
+  content: attr(data-th);
+  display: block;
+  width: calc(100% - 2px);
+  margin: 0 auto;
+  padding: 2px 0 3px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background: #171717;
+}
+#switch-scatter:checked ~ table td:nth-of-type(1):before {
+  content: attr(data-td);
+}
+#switch-scatter:checked ~ table td:nth-of-type(2):before {
+  content: attr(data-td);
+}
+#switch-scatter:checked ~ table td:nth-of-type(3):before {
+  content: attr(data-td);
+}
+#switch-scatter:checked ~ table td:nth-of-type(4):before {
+  content: attr(data-td);
+}
+#switch-scatter:checked ~ table td:nth-of-type(5):before {
+  content: attr(data-td);
+}
