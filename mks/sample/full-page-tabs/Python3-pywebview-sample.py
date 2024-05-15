@@ -6,5 +6,6 @@ gi.require_version('Soup', '2.4')
 import webview
 
 if __name__ == '__main__':
- webview.create_window('Mesa-Kernel-switcher[MKS Utility]', './ui/html5-test/index.html', frameless=False, easy_drag=True)
+ webview.create_window('Full-screen window', 'html5.html', frameless=False, easy_drag=True)
  webview.start()
+
