@@ -8,4 +8,3 @@ import webview
 if __name__ == '__main__':
  webview.create_window('Mesa-Kernel-switcher[MKS Utility]', './ui/html5-test/index.html', frameless=False, easy_drag=True)
  webview.start()
-

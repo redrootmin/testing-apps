@@ -1,0 +1,50 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+}
+
+/* old IE gets regular radios */
+.toggle-radio:not(.old-ie) {
+  display: inline-block;
+  width: 12em;
+  
+  label {
+    background: #ccc;
+    padding: .75em 0;
+    display: block;
+    color: #222;
+    width: 6em;
+    float: left;
+    text-align: center;
+    border-left: 1px solid #bbb;
+    
+    &:hover {
+      cursor: pointer;
+      background: #d3d3d3;
+    }
+    
+    &:last-child {
+      border-radius: 0 2px 2px 0; 
+    }
+  }
+  
+  [type="radio"] {
+    display: none;
+    
+    &:first-child + label {
+      border-radius: 2px 0 0 2px;
+      border: none;
+    }
+    
+    &:checked + label {
+      background: #cde;
+    }
+  }
+
+}
