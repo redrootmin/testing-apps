@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+import sys
+import gi
+gi.require_version('Soup', '2.4')
 import random
 import sys
 import threading
