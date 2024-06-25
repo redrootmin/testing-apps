@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ButtonStrip.js Demo</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <div id="content"></div>
+        <script src="buttonstrip.min.js"></script>
+        <script>
+            var bs1 = new ButtonStrip({
+                id: 'buttonStrip1'
+            });
+            bs1.addButton('Options', true, 'click', function(){
+                console.log('Hallo Welt!');
+            });
+            bs1.addButton('Logs', false, 'click', function(){
+                console.log('Test');
+            });
+            bs1.append('#content');
+        </script>
+    </body>
+</html> 

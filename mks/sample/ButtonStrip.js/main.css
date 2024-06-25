@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Khula:400,700');
+
+.button-strip {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 340px;
+    height: 55px;
+    border: 2px solid #1496BD;
+    border-radius: 3px;
+    display: flex;
+}
+
+.strip-button {
+    background-color: white;
+    color: #1496BD;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 65px;
+    transition: background-color .4s linear, color .2s linear;
+    cursor: pointer;
+}
+
+.strip-button span {
+    color: inherit;
+}
+
+.strip-button-text {
+    font-family: 'Khula', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #1496BD;
+    margin: 0px;
+    padding: 0px;
+}
+
+.active-strip-button {
+    background-color: #1496BD;
+    color: white;
+}

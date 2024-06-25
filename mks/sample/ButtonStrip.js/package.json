@@ -1,0 +1,16 @@
+{
+  "name": "buttonstrip.js",
+  "version": "1.0.0",
+  "description": "A JavaScript library to create easily a strip of buttons.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JavaScript",
+    "Frontend"
+  ],
+  "author": "Laurence Trippen",
+  "license": "ISC",
+  "dependencies": {}
+}
