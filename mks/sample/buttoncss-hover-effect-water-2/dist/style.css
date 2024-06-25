@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #333;
+  /* /.wrapper */
+}
+body .wrapper {
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* .wave-btn */
+}
+body .wrapper .wave-btn {
+  width: 200px;
+  height: 60px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: all 0.8s ease 0s;
+  position: relative;
+  overflow: hidden;
+  color: #da291c;
+  background-color: #fff;
+  border: 2px solid #da291c;
+}
+body .wrapper .wave-btn:hover {
+  color: #fff;
+  background-color: #fff;
+  border-color: #fff;
+}
+body .wrapper .wave-btn:hover .wave-btn__waves {
+  transform: translateY(35%);
+  animation: waves 7.5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+body .wrapper .wave-btn__text {
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 2;
+}
+body .wrapper .wave-btn__waves {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 2200px;
+  height: 126px;
+  background-repeat: repeat-x;
+  transform: translateY(100%);
+  transition: transform 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 172 125.7' xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2'><path fill='%23da291c' d='M173,22.7c-33.9,0-44.7-14.1-88.4-14.1c-43.6,0-54.5,14.1-86,14.1V126l174.4-0.3C173,125.7,173,28.7,173,22.7z'/></svg>");
+}
+
+@keyframes waves {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}

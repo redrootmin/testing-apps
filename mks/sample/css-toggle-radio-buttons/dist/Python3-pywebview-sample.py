@@ -6,6 +6,6 @@ gi.require_version('Soup', '2.4')
 import webview
 
 if __name__ == '__main__':
- webview.create_window('web_app_test', 'index.html', frameless=False, easy_drag=True)
+ webview.create_window('Full-screen window', 'index.html', fullscreen=False)
  webview.start()
 
