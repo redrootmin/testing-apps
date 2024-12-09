@@ -1,13 +1,13 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Шаблон_Desktop_file
+Name=renpy-8.3.3-sdk
 Comment=
-Categories=
-Exec=
-Terminal=
-Icon=
-GenericName=
+Categories=Development;IDE;
+Exec=bash -c '/home/gamer/rug-apps/renpy-8.3.3-sdk/renpy.sh'
+Terminal=false
+Icon=/home/gamer/rug-apps/renpy-8.3.3-sdk/renpy-logo.png
+GenericName=renpy-8.3.3-sdk
 Name[ru]=
 #Name=Yandex.Disk indicator
 #Comment=Yandex.Disk indicator
@@ -20,4 +20,4 @@ Name[ru]=
 #Name[el]=Ένδειξη λειτουργίας του Yandex.Disk
 #Name[bg]=Yandex.Disk индикатор
 #Name[be]=Індыкатар Яндекс.Дыск 
-Name[ru_RU]=renpy.desktop
+Name[ru_RU]=renpy-8.3.3-sdk
