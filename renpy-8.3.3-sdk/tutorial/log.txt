@@ -1,0 +1,30 @@
+2024-12-09 08:54:34 UTC
+Linux-6.1.100-un-def-alt1-x86_64-with-glibc2.32
+Ren'Py 8.3.3.24111502
+
+Early init took 0.04s
+Loading error handling took 0.13s
+Loading script took 3.11s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.24s
+Loading analysis data took 0.00s
+Analyze and compile ATL took 0.02s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to '/home/gamer/.renpy/backups/tutorial':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.02s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.07s
