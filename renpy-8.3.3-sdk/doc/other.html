@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=53e4bfcb"></script>
+        <script src="_static/documentation_options.js?v=986d2f06"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.3 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.4 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -181,6 +181,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_renderer_info"><code class="docutils literal notranslate"><span class="pre">renpy.get_renderer_info()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_say_attributes"><code class="docutils literal notranslate"><span class="pre">renpy.get_say_attributes()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_skipping"><code class="docutils literal notranslate"><span class="pre">renpy.get_skipping()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renpy.get_statement_name"><code class="docutils literal notranslate"><span class="pre">renpy.get_statement_name()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.get_transition"><code class="docutils literal notranslate"><span class="pre">renpy.get_transition()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.iconify"><code class="docutils literal notranslate"><span class="pre">renpy.iconify()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#renpy.include_module"><code class="docutils literal notranslate"><span class="pre">renpy.include_module()</span></code></a></li>
@@ -827,6 +828,13 @@ None if no attributes are associated with this statement.</p>
 <span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_skipping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_skipping" title="Link to this definition"></a></dt>
 <dd><p>Returns &quot;slow&quot; if the Ren'Py is skipping, &quot;fast&quot; if Ren'Py is fast skipping,
 and None if it is not skipping.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="renpy.get_statement_name">
+<span class="sig-prename descclassname"><span class="pre">renpy.</span></span><span class="sig-name descname"><span class="pre">get_statement_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#renpy.get_statement_name" title="Link to this definition"></a></dt>
+<dd><p>Get the name of the current statement, a string like &quot;say&quot;, &quot;say-nvl&quot;, or &quot;window hide&quot;. This is the
+same statement name used with <a class="reference internal" href="config.html#var-config.statement_callbacks"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.statement_callbacks</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">

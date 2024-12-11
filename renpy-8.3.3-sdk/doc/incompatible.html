@@ -19,7 +19,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=53e4bfcb"></script>
+        <script src="_static/documentation_options.js?v=986d2f06"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -48,7 +48,7 @@
 <img src="_static/navbar-logo.png" alt="Logo" style="width: 93px; height: 100px; border-radius: 0; margin: 0 auto; padding: 0; margin-top: 5px; background-color: unset;" />
 </a>
 
-<a href="index.html" style="margin-bottom: 0px">8.3.3 Documentation</a>
+<a href="index.html" style="margin-bottom: 0px">8.3.4 Documentation</a>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -175,10 +175,12 @@
 <li class="toctree-l1"><a class="reference internal" href="changelog6.html">Changelog (Ren'Py 6.11 - 6.99)</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Incompatible Changes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#pending-deprecations">Pending Deprecations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#incompatible-7-8-4">8.3.4 / 7.8.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-7-8-0">8.3.0 / 7.8.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-7-7-2">8.2.2 / 7.7.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-7-7-1">8.2.1 / 7.7.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-7-7-0">8.2.0 / 7.7.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#incompatible-7-6-2">8.1.2 / 7.6.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-7-6-1">8.1.1 / 7.6.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-7-6-0">8.1.0 / 7.6.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-7-5-2">8.0.2 / 7.5.2</a></li>
@@ -198,16 +200,16 @@
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-7-1">7.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-7-0">7.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-6-99">6.99.13</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id24">6.99.12.3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id25">6.99.11</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id26">6.99.9</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id27">6.99.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id26">6.99.12.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id27">6.99.11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id28">6.99.9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id29">6.99.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-6-18">6.18</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-6-16">6.16</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-6-15-7">6.15.7</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-6-14">6.14</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-6-13">6.13.8</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id33">6.13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id35">6.13</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-6-12-1">6.12.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-6-12-0">6.12.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#incompatible-6-11-1">6.11.1</a></li>
@@ -260,8 +262,20 @@ such changes only take effect when the GUI is regenerated.</p>
 <p>Ren'Py 7.8 is the last release to support Python 2.</p>
 <p>Ren'Py 8.4 will drop support for the original OpenGL renderer (gl1), and for Windows 7, 8, and 8.1.</p>
 </section>
+<section id="incompatible-7-8-4">
+<span id="incompatible-8-3-4"></span><span id="id1"></span><h2>8.3.4 / 7.8.4<a class="headerlink" href="#incompatible-7-8-4" title="Link to this heading"></a></h2>
+<p><strong>Dissolving Different-Sized Displayables, part two.</strong> When ImageDissolving or AlphaDissolving between
+displayables of different sizes, Ren'Py will give the result the size of the largest displayable, in
+each access. To revert to the pre-8.1.2 behavior (the smallest size on each axis), add to your game:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">config</span><span class="o">.</span><span class="n">dissolve_shrinks</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p><strong>Removal of the ATL 'update' event.</strong> Previous versions of Ren'Py could deliver and &quot;update&quot; event to ATL
+inside screens when the screen was changed in major ways, such as when changing translations. This event
+was not delivered reliably, and is unlikely to have been used, so it has been removed.</p>
+</section>
 <section id="incompatible-7-8-0">
-<span id="incompatible-8-3-0"></span><span id="id1"></span><h2>8.3.0 / 7.8.0<a class="headerlink" href="#incompatible-7-8-0" title="Link to this heading"></a></h2>
+<span id="incompatible-8-3-0"></span><span id="id2"></span><h2>8.3.0 / 7.8.0<a class="headerlink" href="#incompatible-7-8-0" title="Link to this heading"></a></h2>
 <p><strong>Box_reverse and Box_align</strong> The <a class="reference internal" href="style_properties.html#style-property-box_reverse"><code class="xref std std-propref docutils literal notranslate"><span class="pre">box_reverse</span></code></a> property now no longer adjusts the box
 alignment. To adjust the box alignment, set the <a class="reference internal" href="style_properties.html#style-property-box_align"><code class="xref std std-propref docutils literal notranslate"><span class="pre">box_align</span></code></a> property to 1.0, or use:</p>
 <blockquote>
@@ -354,7 +368,7 @@ float, and leave left/top unconstrained. This behavior can be restored by adding
 </div>
 </section>
 <section id="incompatible-7-7-2">
-<span id="incompatible-8-2-2"></span><span id="id2"></span><h2>8.2.2 / 7.7.2<a class="headerlink" href="#incompatible-7-7-2" title="Link to this heading"></a></h2>
+<span id="incompatible-8-2-2"></span><span id="id3"></span><h2>8.2.2 / 7.7.2<a class="headerlink" href="#incompatible-7-7-2" title="Link to this heading"></a></h2>
 <p><strong>Fill and Frames</strong> In certain cases in 8.2.1 and earlier, the <a class="reference internal" href="style_properties.html#style-property-xfill"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xfill</span></code></a> and <a class="reference internal" href="style_properties.html#style-property-yfill"><code class="xref std std-propref docutils literal notranslate"><span class="pre">yfill</span></code></a>
 style properties could cause Frames, Windows, and Buttons to shrink in size. Now, only expansion in
 size is allowed. To revert this, add:</p>
@@ -363,14 +377,14 @@ size is allowed. To revert this, add:</p>
 </div>
 </section>
 <section id="incompatible-7-7-1">
-<span id="incompatible-8-2-1"></span><span id="id3"></span><h2>8.2.1 / 7.7.1<a class="headerlink" href="#incompatible-7-7-1" title="Link to this heading"></a></h2>
+<span id="incompatible-8-2-1"></span><span id="id4"></span><h2>8.2.1 / 7.7.1<a class="headerlink" href="#incompatible-7-7-1" title="Link to this heading"></a></h2>
 <p><strong>*Vertical Text</strong> Vertical text had been improved in the harfbuzz shaper,
 with the text now being rendered in the correct place. This may cause
 position changes, but since the previous version was wildly incorrect,
 no compatibility define is provided.</p>
 </section>
 <section id="incompatible-7-7-0">
-<span id="incompatible-8-2-0"></span><span id="id4"></span><h2>8.2.0 / 7.7.0<a class="headerlink" href="#incompatible-7-7-0" title="Link to this heading"></a></h2>
+<span id="incompatible-8-2-0"></span><span id="id5"></span><h2>8.2.0 / 7.7.0<a class="headerlink" href="#incompatible-7-7-0" title="Link to this heading"></a></h2>
 <p><strong>Stringified annotations and the aborted future of PEP 563</strong> Since Ren'Py
 version 8.0.2, Python code in Ren'Py 8 was always compiled using the
 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">annotations</span></code> directive, with no possible opt-out
@@ -520,8 +534,17 @@ disappear. Now, the event will be allowed to run to completion.</p>
 </pre></div>
 </div>
 </section>
+<section id="incompatible-7-6-2">
+<span id="incompatible-8-1-2"></span><span id="id6"></span><h2>8.1.2 / 7.6.2<a class="headerlink" href="#incompatible-7-6-2" title="Link to this heading"></a></h2>
+<p><strong>Dissolving Different-Sized Displayables</strong> When dissolving between two displayables
+of different sizes, Ren'Py will give the result the size of the largest displayable, in
+each access. To revert to the previous behavior (the smallest size on each axis), add to your game:</p>
+<div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">config</span><span class="o">.</span><span class="n">dissolve_shrinks</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</section>
 <section id="incompatible-7-6-1">
-<span id="incompatible-8-1-1"></span><span id="id5"></span><h2>8.1.1 / 7.6.1<a class="headerlink" href="#incompatible-7-6-1" title="Link to this heading"></a></h2>
+<span id="incompatible-8-1-1"></span><span id="id7"></span><h2>8.1.1 / 7.6.1<a class="headerlink" href="#incompatible-7-6-1" title="Link to this heading"></a></h2>
 <p id="android-key-migration"><strong>Android Key Migration</strong> We've received reports of games uploaded to the Google Play as bundles
 having their APKs rejected for having different keys. This was caused by
 an old release of Ren'Py that used the APK key for bundles. In the Play Console,
@@ -545,7 +568,7 @@ keys), one potential fix is:</p>
 <p>Then rebuild and re-upload your bundle.</p>
 </section>
 <section id="incompatible-7-6-0">
-<span id="incompatible-8-1-0"></span><span id="id6"></span><h2>8.1.0 / 7.6.0<a class="headerlink" href="#incompatible-7-6-0" title="Link to this heading"></a></h2>
+<span id="incompatible-8-1-0"></span><span id="id8"></span><h2>8.1.0 / 7.6.0<a class="headerlink" href="#incompatible-7-6-0" title="Link to this heading"></a></h2>
 <p><strong>Conflicting properties</strong> The former default input screen, which may have found
 its way into your game, contains conflicting style properties. The fix for that
 is as follows:</p>
@@ -715,7 +738,7 @@ for ATL that is not in screens.</p>
 </div>
 </section>
 <section id="incompatible-7-5-2">
-<span id="incompatible-8-0-2"></span><span id="id7"></span><h2>8.0.2 / 7.5.2<a class="headerlink" href="#incompatible-7-5-2" title="Link to this heading"></a></h2>
+<span id="incompatible-8-0-2"></span><span id="id9"></span><h2>8.0.2 / 7.5.2<a class="headerlink" href="#incompatible-7-5-2" title="Link to this heading"></a></h2>
 <p>A modal screen now blocks the <code class="docutils literal notranslate"><span class="pre">pause</span></code> statement and <code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.pause`()</span></code>
 function from timing out. This was the indended behavior, but didn't work
 in some cases. This change can be reverted with:</p>
@@ -731,7 +754,7 @@ to be changed to:</p>
 <p>This change is only required if your game uses Ruby/Furigana text tags.</p>
 </section>
 <section id="incompatible-7-5-0">
-<span id="incompatible-8-0-0"></span><span id="id8"></span><h2>8.0.0 / 7.5.0<a class="headerlink" href="#incompatible-7-5-0" title="Link to this heading"></a></h2>
+<span id="incompatible-8-0-0"></span><span id="id10"></span><h2>8.0.0 / 7.5.0<a class="headerlink" href="#incompatible-7-5-0" title="Link to this heading"></a></h2>
 <p>The &quot;Windows, Mac, and Linux for Markets&quot; distribution has been changed to
 no longer prefix the contents of the zip file created with the directory
 name and version number. If you'd like to retain the old behavior, add
@@ -835,7 +858,7 @@ at a function, use:</p>
 </div>
 </section>
 <section id="incompatible-7-4-11">
-<span id="id9"></span><h2>7.4.11<a class="headerlink" href="#incompatible-7-4-11" title="Link to this heading"></a></h2>
+<span id="id11"></span><h2>7.4.11<a class="headerlink" href="#incompatible-7-4-11" title="Link to this heading"></a></h2>
 <p>Ren'Py will now run a button's unhovered property even when focus is
 changed by default, such as when a screen is shown or unshown. To
 revert to the old behavior, use:</p>
@@ -844,7 +867,7 @@ revert to the old behavior, use:</p>
 </div>
 </section>
 <section id="incompatible-7-4-9">
-<span id="id10"></span><h2>7.4.9<a class="headerlink" href="#incompatible-7-4-9" title="Link to this heading"></a></h2>
+<span id="id12"></span><h2>7.4.9<a class="headerlink" href="#incompatible-7-4-9" title="Link to this heading"></a></h2>
 <p>Ren'Py will now interpret floating point numbers given to a Transform's
 <a class="reference internal" href="transform_properties.html#transform-property-xsize"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">xsize</span></code></a> or <a class="reference internal" href="transform_properties.html#transform-property-ysize"><code class="xref std std-tpref docutils literal notranslate"><span class="pre">ysize</span></code></a> properties as a size relative to the area
 available to the Transform. To revert this change:</p>
@@ -859,7 +882,7 @@ are read first. To revert to the old order:</p>
 </div>
 </section>
 <section id="incompatible-7-4-7">
-<span id="id11"></span><h2>7.4.7<a class="headerlink" href="#incompatible-7-4-7" title="Link to this heading"></a></h2>
+<span id="id13"></span><h2>7.4.7<a class="headerlink" href="#incompatible-7-4-7" title="Link to this heading"></a></h2>
 <p>When <a class="reference internal" href="style_properties.html#style-property-xminimum"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xminimum</span></code></a> and <a class="reference internal" href="style_properties.html#style-property-xmaximum"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xmaximum</span></code></a> are both floats, the
 minimum is interpreted as being a fraction of the available area. This
 means that <a class="reference internal" href="style_properties.html#style-property-xsize"><code class="xref std std-propref docutils literal notranslate"><span class="pre">xsize</span></code></a> will have the expected result when being
@@ -879,12 +902,12 @@ appears, rather than when the screen itself is shown. To revert this change:</p>
 </div>
 </section>
 <section id="incompatible-7-4-6">
-<span id="id12"></span><h2>7.4.6<a class="headerlink" href="#incompatible-7-4-6" title="Link to this heading"></a></h2>
+<span id="id14"></span><h2>7.4.6<a class="headerlink" href="#incompatible-7-4-6" title="Link to this heading"></a></h2>
 <p>The change regarding the layer at list in 7.4.5 was reverted. The new <code class="docutils literal notranslate"><span class="pre">camera</span></code>
 statement defaults to the new semantics, while leaving <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">layer</span></code> alone.</p>
 </section>
 <section id="incompatible-7-4-5">
-<span id="id13"></span><h2>7.4.5<a class="headerlink" href="#incompatible-7-4-5" title="Link to this heading"></a></h2>
+<span id="id15"></span><h2>7.4.5<a class="headerlink" href="#incompatible-7-4-5" title="Link to this heading"></a></h2>
 <p>Games produced with this version use the model-based renderer by default.
 To disable the model-based renderer, use:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">config</span><span class="o">.</span><span class="n">gl2</span> <span class="o">=</span> <span class="kc">False</span>
@@ -903,7 +926,7 @@ can be restored with:</p>
 </div>
 </section>
 <section id="incompatible-7-4-3">
-<span id="id14"></span><h2>7.4.3<a class="headerlink" href="#incompatible-7-4-3" title="Link to this heading"></a></h2>
+<span id="id16"></span><h2>7.4.3<a class="headerlink" href="#incompatible-7-4-3" title="Link to this heading"></a></h2>
 <p>It is now possible to click to dismiss transitions introduced with
 <a class="reference internal" href="other.html#renpy.transition" title="renpy.transition"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.transition()</span></code></a>, and places that use it like the <code class="docutils literal notranslate"><span class="pre">with</span></code> clause
 of say or <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">screen</span></code> statement. To prevent this, use:</p>
@@ -912,7 +935,7 @@ of say or <code class="docutils literal notranslate"><span class="pre">call</spa
 </div>
 </section>
 <section id="incompatible-7-4-1">
-<span id="id15"></span><h2>7.4.1<a class="headerlink" href="#incompatible-7-4-1" title="Link to this heading"></a></h2>
+<span id="id17"></span><h2>7.4.1<a class="headerlink" href="#incompatible-7-4-1" title="Link to this heading"></a></h2>
 <p>Pause with a delay now uses <a class="reference internal" href="statement_equivalents.html#renpy.pause" title="renpy.pause"><code class="xref py py-func docutils literal notranslate"><span class="pre">renpy.pause()</span></code></a> rather than <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">Pause(...)</span></code>.
 This means that the user will have to click to bypass multiple pauses in a row.
 To revert to the old behavior, use:</p>
@@ -921,7 +944,7 @@ To revert to the old behavior, use:</p>
 </div>
 </section>
 <section id="incompatible-7-4">
-<span id="id16"></span><h2>7.4<a class="headerlink" href="#incompatible-7-4" title="Link to this heading"></a></h2>
+<span id="id18"></span><h2>7.4<a class="headerlink" href="#incompatible-7-4" title="Link to this heading"></a></h2>
 <p>Mobile platforms now use hardware, rather than software, video playback.
 To restore the old behavior, use:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">config</span><span class="o">.</span><span class="n">hw_video</span> <span class="o">=</span> <span class="kc">True</span>
@@ -937,7 +960,7 @@ phase was never supported, it will not work in 7.4. Consider using the
 <a class="reference internal" href="store_variables.html#var-default_mouse"><code class="xref std std-var docutils literal notranslate"><span class="pre">default_mouse</span></code></a> variable to set a custom mouse cursor, instead.</p>
 </section>
 <section id="incompatible-7-3-3">
-<span id="id17"></span><h2>7.3.3<a class="headerlink" href="#incompatible-7-3-3" title="Link to this heading"></a></h2>
+<span id="id19"></span><h2>7.3.3<a class="headerlink" href="#incompatible-7-3-3" title="Link to this heading"></a></h2>
 <p>Callbacks registered with <a class="reference internal" href="config.html#var-config.start_callbacks"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.start_callbacks</span></code></a> are now run
 after <code class="docutils literal notranslate"><span class="pre">default</span></code> statements in all cases. To restore the old behavior
 (where callbacks were run before <code class="docutils literal notranslate"><span class="pre">default</span></code> statements during game
@@ -955,7 +978,7 @@ and <code class="docutils literal notranslate"><span class="pre">viewport_yminim
 </div>
 </section>
 <section id="incompatible-7-3-0">
-<span id="id18"></span><h2>7.3.0<a class="headerlink" href="#incompatible-7-3-0" title="Link to this heading"></a></h2>
+<span id="id20"></span><h2>7.3.0<a class="headerlink" href="#incompatible-7-3-0" title="Link to this heading"></a></h2>
 <p>Screen language now produces the error &quot;a non-constant keyword argument ...
 is not allowed after a python block.&quot; when it encounters screens similar
 to the following:</p>
@@ -993,12 +1016,12 @@ a value of <code class="docutils literal notranslate"><span class="pre">both</sp
 attribute transition is occuring.</p>
 </section>
 <section id="incompatible-7-2-2">
-<span id="id19"></span><h2>7.2.2<a class="headerlink" href="#incompatible-7-2-2" title="Link to this heading"></a></h2>
+<span id="id21"></span><h2>7.2.2<a class="headerlink" href="#incompatible-7-2-2" title="Link to this heading"></a></h2>
 <p><a class="reference internal" href="config.html#var-config.say_attribute_transition_callback"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.say_attribute_transition_callback</span></code></a> has been changed to
 accept a new argument, the image being displayed.</p>
 </section>
 <section id="incompatible-7-1-1">
-<span id="id20"></span><h2>7.1.1<a class="headerlink" href="#incompatible-7-1-1" title="Link to this heading"></a></h2>
+<span id="id22"></span><h2>7.1.1<a class="headerlink" href="#incompatible-7-1-1" title="Link to this heading"></a></h2>
 <p>Ren'Py's window auto function will now determine if dialogue or a caption
 is associated with a menu statement, and will attempt to hide or show the
 dialogue window as appropriate. A &quot;Force Recompile&quot; is necessary to include
@@ -1014,7 +1037,7 @@ to the history screen. Please see <a class="reference internal" href="changelog.
 for details of how to update your game.</p>
 </section>
 <section id="incompatible-7-1">
-<span id="id21"></span><h2>7.1<a class="headerlink" href="#incompatible-7-1" title="Link to this heading"></a></h2>
+<span id="id23"></span><h2>7.1<a class="headerlink" href="#incompatible-7-1" title="Link to this heading"></a></h2>
 <p>When an image is not being show, say-with-attributes now resolves a side
 image, rather than just using the attributes given. To disable this, add:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">config</span><span class="o">.</span><span class="n">say_attributes_use_side_image</span> <span class="o">=</span> <span class="kc">False</span>
@@ -1022,7 +1045,7 @@ image, rather than just using the attributes given. To disable this, add:</p>
 </div>
 </section>
 <section id="incompatible-7-0">
-<span id="id22"></span><h2>7.0<a class="headerlink" href="#incompatible-7-0" title="Link to this heading"></a></h2>
+<span id="id24"></span><h2>7.0<a class="headerlink" href="#incompatible-7-0" title="Link to this heading"></a></h2>
 <p>Ren'Py now defines automatic images at init 0, rather than at a very late
 init level. To revert to the prior behavior, add to your game:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">init</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
@@ -1042,7 +1065,7 @@ To revert to the previous behavior:</p>
 </div>
 </section>
 <section id="incompatible-6-99">
-<span id="id23"></span><h2>6.99.13<a class="headerlink" href="#incompatible-6-99" title="Link to this heading"></a></h2>
+<span id="id25"></span><h2>6.99.13<a class="headerlink" href="#incompatible-6-99" title="Link to this heading"></a></h2>
 <p>The size of a hyperlink is now inherited from the size of the enclosing text.
 To disable this, add:</p>
 <div class="highlight-renpy notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="n">config</span><span class="o">.</span><span class="n">hyperlink_inherit_size</span> <span class="o">=</span> <span class="kc">False</span>
@@ -1074,15 +1097,15 @@ would pick one at random. (The file picked could change from
 system to system.) Now, the same file  is chosen wherever Ren'Py
 is run.</p>
 </section>
-<section id="id24">
-<h2>6.99.12.3<a class="headerlink" href="#id24" title="Link to this heading"></a></h2>
+<section id="id26">
+<h2>6.99.12.3<a class="headerlink" href="#id26" title="Link to this heading"></a></h2>
 <p>Ren'Py will no longer search for system-installed fonts when in developer
 mode. If you game was using a system installed font, the font file should
 be copied into the game/ directory. (But please make sure that this is
 compatible with the font file's license.)</p>
 </section>
-<section id="id25">
-<h2>6.99.11<a class="headerlink" href="#id25" title="Link to this heading"></a></h2>
+<section id="id27">
+<h2>6.99.11<a class="headerlink" href="#id27" title="Link to this heading"></a></h2>
 <p>The order of execution of <code class="docutils literal notranslate"><span class="pre">style</span></code> and <code class="docutils literal notranslate"><span class="pre">translate</span></code> statements has
 changed, as documented in <a class="reference internal" href="changelog6.html#renpy-6-99-11"><span class="std std-ref">the changelog</span></a>. To
 revent this change, add the code:</p>
@@ -1102,8 +1125,8 @@ this behavior, add the code:</p>
 </pre></div>
 </div>
 </section>
-<section id="id26">
-<h2>6.99.9<a class="headerlink" href="#id26" title="Link to this heading"></a></h2>
+<section id="id28">
+<h2>6.99.9<a class="headerlink" href="#id28" title="Link to this heading"></a></h2>
 <p>Ren'Py now plays interface sounds on a channel named &quot;audio&quot;, that
 supports multiple sound playback at once. This channel might not have
 the same settings as a customized sound channel. The audio channel
@@ -1113,8 +1136,8 @@ or the sound channel can be used by adding the code:</p>
 </pre></div>
 </div>
 </section>
-<section id="id27">
-<h2>6.99.2<a class="headerlink" href="#id27" title="Link to this heading"></a></h2>
+<section id="id29">
+<h2>6.99.2<a class="headerlink" href="#id29" title="Link to this heading"></a></h2>
 <p>Ren'Py will now scan the an image directory (the directory named images
 underneath the game directory) for images, and define them based on their
 filename. To disable this behavior, use the code:</p>
@@ -1124,7 +1147,7 @@ filename. To disable this behavior, use the code:</p>
 </div>
 </section>
 <section id="incompatible-6-18">
-<span id="id28"></span><h2>6.18<a class="headerlink" href="#incompatible-6-18" title="Link to this heading"></a></h2>
+<span id="id30"></span><h2>6.18<a class="headerlink" href="#incompatible-6-18" title="Link to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">screen</span></code> and <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">screen</span></code> statements may now evaluate their
 arguments as part of the screen prediction process. If evaluating the
 arguments to a screen causes side effects to occur, the <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">screen</span></code>
@@ -1139,18 +1162,18 @@ tag. Instead, the <a class="reference internal" href="screens.html#sl-use"><span
 property, which can be used to explicitly transfer state.</p>
 </section>
 <section id="incompatible-6-16">
-<span id="id29"></span><h2>6.16<a class="headerlink" href="#incompatible-6-16" title="Link to this heading"></a></h2>
+<span id="id31"></span><h2>6.16<a class="headerlink" href="#incompatible-6-16" title="Link to this heading"></a></h2>
 <p>The meaning of the <cite>loop</cite> parameter to <a class="reference internal" href="rooms.html#MusicRoom" title="MusicRoom"><code class="xref py py-func docutils literal notranslate"><span class="pre">MusicRoom()</span></code></a> has changed. To
 get the old behavior, set both <cite>loop</cite> and <cite>single_track</cite> to true.</p>
 </section>
 <section id="incompatible-6-15-7">
-<span id="id30"></span><h2>6.15.7<a class="headerlink" href="#incompatible-6-15-7" title="Link to this heading"></a></h2>
+<span id="id32"></span><h2>6.15.7<a class="headerlink" href="#incompatible-6-15-7" title="Link to this heading"></a></h2>
 <p>Ren'Py now expects auto-forward mode to be controlled by the &quot;auto-forward&quot; <a class="reference internal" href="screen_actions.html#Preference" title="Preference"><code class="xref py py-func docutils literal notranslate"><span class="pre">Preference()</span></code></a>.
 To have it controlled by the auto-forward mode slider, set <code class="xref std std-var docutils literal notranslate"><span class="pre">config.default_afm_enable</span></code> to
 None.</p>
 </section>
 <section id="incompatible-6-14">
-<span id="id31"></span><h2>6.14<a class="headerlink" href="#incompatible-6-14" title="Link to this heading"></a></h2>
+<span id="id33"></span><h2>6.14<a class="headerlink" href="#incompatible-6-14" title="Link to this heading"></a></h2>
 <p>Previously, Ren'Py moved archived files into the archived/
 directory. It would search this directory automatically when running a
 game or building archives. One-click builds make this unnecessary,
@@ -1164,7 +1187,7 @@ asymmetrically scaled and rotated images. It's unlikely the old
 behavior was ever used.</p>
 </section>
 <section id="incompatible-6-13">
-<span id="id32"></span><h2>6.13.8<a class="headerlink" href="#incompatible-6-13" title="Link to this heading"></a></h2>
+<span id="id34"></span><h2>6.13.8<a class="headerlink" href="#incompatible-6-13" title="Link to this heading"></a></h2>
 <p>Old-style string interpolation has been re-enabled by default. If you
 wrote code (between 6.13 and 6.13.7) that uses % in say or menu statements, you should either
 write %% instead, or include the code:</p>
@@ -1173,8 +1196,8 @@ write %% instead, or include the code:</p>
 </pre></div>
 </div>
 </section>
-<section id="id33">
-<h2>6.13<a class="headerlink" href="#id33" title="Link to this heading"></a></h2>
+<section id="id35">
+<h2>6.13<a class="headerlink" href="#id35" title="Link to this heading"></a></h2>
 <p>The changes to text behavior can affect games in development in many
 ways. The biggest change is the introduction of new-style
 (square-bracket) text substitutions, and the elimination of old-style
@@ -1207,7 +1230,7 @@ text, especially in conjunction with a negative line spacing. Consider
 adjusting <a class="reference internal" href="style_properties.html#style-property-line_overlap_split"><code class="xref std std-propref docutils literal notranslate"><span class="pre">line_overlap_split</span></code></a> to fix this.</p>
 </section>
 <section id="incompatible-6-12-1">
-<span id="id34"></span><h2>6.12.1<a class="headerlink" href="#incompatible-6-12-1" title="Link to this heading"></a></h2>
+<span id="id36"></span><h2>6.12.1<a class="headerlink" href="#incompatible-6-12-1" title="Link to this heading"></a></h2>
 <p>Image names have changed from being static names to being
 attribute-based. This can lead to image names that were previously
 distinct becoming ambiguous. To disable attribute-based image names,
@@ -1222,7 +1245,7 @@ can be restored for compatibility purposes by setting
 <code class="xref std std-var docutils literal notranslate"><span class="pre">config.new_character_image_argument</span></code> to False.</p>
 </section>
 <section id="incompatible-6-12-0">
-<span id="id35"></span><h2>6.12.0<a class="headerlink" href="#incompatible-6-12-0" title="Link to this heading"></a></h2>
+<span id="id37"></span><h2>6.12.0<a class="headerlink" href="#incompatible-6-12-0" title="Link to this heading"></a></h2>
 <p>The definition of the <cite>items</cite> parameter of the <a class="reference internal" href="screen_special.html#choice-screen"><span class="std std-ref">Choice</span></a> and
 <code class="docutils literal notranslate"><span class="pre">nvl_choice</span></code> screens has changed. The <code class="docutils literal notranslate"><span class="pre">nvl_choice</span></code> screen is
 deprecated in favor of the <a class="reference internal" href="screen_special.html#nvl-screen"><span class="std std-ref">NVL</span></a> screen.</p>
@@ -1236,7 +1259,7 @@ style.image_placement are now ignored. To revert to the old behavior,
 set <code class="xref std std-var docutils literal notranslate"><span class="pre">config.imagereference_respects_position</span></code> to True.</p>
 </section>
 <section id="incompatible-6-11-1">
-<span id="id36"></span><h2>6.11.1<a class="headerlink" href="#incompatible-6-11-1" title="Link to this heading"></a></h2>
+<span id="id38"></span><h2>6.11.1<a class="headerlink" href="#incompatible-6-11-1" title="Link to this heading"></a></h2>
 <p>MoveTransition has been modified to respect the xoffset and yoffset
 parameters of the displayables it is moving. The factory functions
 that are used for movement now take <cite>xoffset</cite> and <cite>yoffset</cite>
@@ -1245,7 +1268,7 @@ parameters without problem, user-defined factories may need to
 be upgraded to use or ignore these additional parameters.</p>
 </section>
 <section id="incompatible-6-11-0">
-<span id="id37"></span><h2>6.11.0<a class="headerlink" href="#incompatible-6-11-0" title="Link to this heading"></a></h2>
+<span id="id39"></span><h2>6.11.0<a class="headerlink" href="#incompatible-6-11-0" title="Link to this heading"></a></h2>
 <ul>
 <li><p>The transform specified by the <a class="reference internal" href="config.html#var-config.default_transform"><code class="xref std std-var docutils literal notranslate"><span class="pre">config.default_transform</span></code></a>
 variable is used to initialize the transform properties of images
@@ -1285,7 +1308,7 @@ incompatible with previous behavior, and so can be disabled with the
 </ul>
 </section>
 <section id="incompatible-6-10-1">
-<span id="id38"></span><h2>6.10.0<a class="headerlink" href="#incompatible-6-10-1" title="Link to this heading"></a></h2>
+<span id="id40"></span><h2>6.10.0<a class="headerlink" href="#incompatible-6-10-1" title="Link to this heading"></a></h2>
 <ul>
 <li><p>The default positions (left, right, center, truecenter,
 offscreenleft, and offscreenright) are now defined as ATL
@@ -1304,7 +1327,7 @@ behavior, you need to redefine these positions, by adding the code:</p>
 </ul>
 </section>
 <section id="incompatible-6-9-2">
-<span id="id39"></span><h2>6.9.2<a class="headerlink" href="#incompatible-6-9-2" title="Link to this heading"></a></h2>
+<span id="id41"></span><h2>6.9.2<a class="headerlink" href="#incompatible-6-9-2" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>To migrate your game from Ren'Py 6.9.2 or later, copy the directory
 containing your game into your projects directory. You can choose a
